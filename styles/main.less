@@ -1,0 +1,210 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  -webkit-tap-highlight-color: transparent;
+  -moz-tap-highlight-color: transparent;
+  -ms-tap-highlight-color: transparent;
+
+  -webkit-font-smoothing: antialiased;
+
+  // fix for Slick slider in Firefox
+  //min-height: 0;
+  //min-width: 0;
+  // fix for Slick slider in Firefox
+
+  &:active, &:focus {
+    outline: none;
+  }
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: #44566C;
+
+  position: relative;
+  margin: 0;
+  padding: 0;
+
+  &.slider-mode {
+    overflow: hidden;
+  }
+
+  &.hidden {
+    overflow: hidden;
+    height: 100vh;
+  }
+}
+
+
+.wrapper {
+  min-height: 90vh;
+  position: relative;
+  overflow: hidden;
+
+  &.wrapper-blured {
+    filter: blur(9px);
+
+    // fix for apple
+    // disable content scroll when popup opened
+    // input caret change position issue in fixed position popup
+    height: 100%;
+    overflow: hidden;
+  }
+}
+
+.container {
+  //max-width: 1768px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 75px;
+  transition: @transition;
+}
+
+.panel-title {
+  position: relative;
+  width: 100%;
+  padding: 25px;
+  text-align: center;
+  background-color: rgba(59, 65, 144, 0.75);
+  background-image: linear-gradient(180deg, rgba(59, 59, 105, 0.75) 0%, rgba(59, 65, 144, 0.75) 100%);
+  font-weight: 500;
+  .font-size(24);
+  text-transform: uppercase;
+  color: @color_white;
+  z-index: 1;
+}
+
+.panel {
+  position: relative;
+  width: 100%;
+  padding: 15px;
+  z-index: 1;
+}
+
+.container-with-aside {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container-content {
+  width: 100%;
+}
+
+.aside {
+  position: relative;
+  width: 30%;
+  min-width: 300px;
+  max-width: 450px;
+  padding: 0 25px 0 0;
+
+  &.aside-lg {
+    width: 25%;
+    min-width: 350px;
+  }
+}
+
+@media @screenLg {
+  .container {
+    padding: 0 25px;
+  }
+}
+
+@media @laptopLg {
+  .container {
+    padding: 0 20px;
+  }
+
+  .aside {
+    z-index: -1;
+
+    &.aside-lg {
+      width: 30%;
+      min-width: 315px;
+    }
+  }
+}
+
+@media @laptop {
+  .container {
+    //min-height: 100vh;
+    height: auto;
+  }
+}
+
+@media @tablet {
+  .panel {
+    display: block;
+    padding: 100px 35px;
+  }
+
+  .aside {
+    min-width: 235px;
+
+    &.aside-lg {
+      min-width: 235px;
+    }
+  }
+}
+
+@media @mobileLg {
+
+  .container {
+    display: block;
+  }
+
+  .panel {
+    padding: 100px 20px 70px;
+  }
+
+  .aside {
+    height: 550px;
+    width: 100%;
+    max-width: none;
+
+    &.aside-lg {
+      width: 100%;
+    }
+
+    .aside-img {
+      width: 100% !important;
+      height: 100% !important;
+      background-size: 490px !important;
+      top: auto !important;
+      bottom: 0 !important;
+      right: 0 !important;
+      left: auto !important;
+    }
+  }
+
+  .currency-block {
+    top: 20px;
+    left: 20px;
+  }
+
+  .drop-animation {
+    top: auto !important;
+    bottom: 0;
+
+    canvas {
+      height: 1300px !important;
+      width: 1300px !important;
+    }
+  }
+
+}
+
+@media @mobileMd {
+  .drop-animation {
+    canvas {
+      height: 900px !important;
+      width: 900px !important;
+    }
+  }
+}

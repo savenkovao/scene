@@ -1,0 +1,154 @@
+.block-feedback {
+  position: relative;
+  min-height: 360px;
+}
+.block-slider {
+  position: absolute;
+  left: 0;
+  width: 808px;
+  //overflow: hidden;
+
+  &_item {
+    display: inline-block;
+    width: 370px;
+    height: 330px;
+    margin-right: 34px;
+    margin-bottom: 36px;
+    background: #FFFFFF;
+    box-shadow: 10px 20px 50px rgba(223, 219, 213, 0.338598);
+    border-radius: 4px;
+    padding: 45px 42px;
+  }
+
+  .logotype {
+    display: inline-block;
+    margin-bottom: 23px;
+  }
+
+  .text {
+    .font-size(18);
+    .line-height(18, 30);
+    font-weight: 400;
+    margin-bottom: 34px;
+    height: 90px;
+    overflow: hidden;
+  }
+
+  .own {
+    padding-right: 40px;
+    background: url(../img/icon-quote.svg) right center / 44px auto no-repeat;
+  }
+
+  .avatar {
+    display: inline-block;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: #D8D8D8;
+    float: left;
+    margin: 5px 18px 18px 0;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .name {
+    .font-size(18);
+    .line-height(18, 20);
+    font-weight: 500;
+    margin: 0 0 11px;
+  }
+
+  .address {
+    .font-size(16);
+    .line-height(16, 20);
+    color: #8697A8;
+    margin: 0;
+  }
+
+  //.slick-list {
+  //  white-space: nowrap;
+  //}
+
+  .slick-slide {
+    margin: 0 17px;
+    //white-space: normal;
+  }
+
+  .slick-dots {
+    position: absolute;
+    bottom: 50px;
+    left: -180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0 0;
+    min-height: 30px;
+
+    li {
+      button {
+        width: 8px;
+        height: 8px;
+        padding: 0;
+        margin: 0 7px;
+        border-radius: 50%;
+        background-image: none;
+        border: 2px solid #E4E4E4;
+        background-color: #fff;
+        font-size: 0;
+        transition: background-color .4s;
+      }
+
+      &.slick-active {
+        button {
+          position: relative;
+          width: 23px;
+          height: 6px;
+          border: none;
+          background: #FF844F;
+          margin: 1px 7px;
+          border-radius: 3px;
+
+          &::before {
+            content: '';
+            position: absolute;
+            width: 11px;
+            height: 11px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media @mobileMd {
+  .block-slider {
+    width: 590px;
+
+    &_item {
+      width: 280px;
+      height: 300px;
+      padding: 25px 22px;
+      margin-right: 17px;
+    }
+
+    .slick-slide {
+      margin: 0 10px;
+    }
+
+    .slick-dots {
+       bottom: 0;
+       left: 30px;
+    }
+  }
+
+}
