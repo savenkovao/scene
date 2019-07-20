@@ -80,6 +80,78 @@
   }
 }
 
+.header-scroll-btn {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+
+  svg {
+    width: 70px;
+    height: 70px;
+    transition: @transition ease-in-out;
+    opacity: .85;
+  }
+
+  &:hover {
+    svg {
+      transform: scale(1.1);
+      opacity: 1;
+    }
+  }
+}
+
+.aside-socials {
+  position: fixed;
+  top: 50%;
+  padding: 0;
+  margin: 0;
+  transform: translateY(-50%);
+  border-radius: 0 4px 4px 0;
+  list-style-type: none;
+  overflow: hidden;
+  z-index: 1;
+
+  li{
+    &:last-child {
+      a {
+        border: none;
+      }
+    }
+  }
+
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 40px;
+    background-color: @color_black;
+    border-bottom: 1px solid @color_white;
+
+    svg {
+      display: inline-block;
+      height: 30px;
+      transition: @transition;
+    }
+
+    svg, path {
+      transition: @transition;
+    }
+
+    &:hover {
+      svg {
+        path {
+          fill:@color_red;
+        }
+      }
+    }
+
+  }
+
+}
+
 /* Heading */
 
 /* scenes */
