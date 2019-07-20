@@ -17,21 +17,21 @@
   </script>
 
 
-  <title>BaseLanding</title>
+  <title>SCENE</title>
 </head>
 <body>
 <div class="remodal-bg" id="home">
   <header id="header" class="header">
     <div class="header-content container">
-      <div class="logo">
-        <a href="/">
-          <img src="public/img/logo.svg" alt="BaseLanding" class="desktop-only">
-        </a>
-      </div>
+      <div class="header-left">
+        <div class="logo">
+          <a href="/">
+            <img src="public/img/logo.svg" alt="SCENE" class="desktop-only">
+          </a>
+        </div>
 
-      <div class="header-search">
-        <form>
-          <div class="header-search-form">
+        <div class="header-search">
+          <form class="header-search-form">
             <label class="form-label">
               <input class="form-control" type="text" placeholder="Search by keyword">
             </label>
@@ -44,9 +44,12 @@
                 <option value="">Item</option>
               </select>
             </label>
-            <button class="btn btn-small">Go</button>
-          </div>
-        </form>
+            <button class="btn btn-red">Go</button>
+          </form>
+          <p>
+            Social discovery platfrom and network for entertainment and city experiences.
+          </p>
+        </div>
       </div>
 
       <nav class="nav">
@@ -55,8 +58,10 @@
           <li><a href="#livefeed">Livefeed</a></li>
           <li><a href="#scenes">Scenes</a></li>
           <li><a href="#organizer">Organizer</a></li>
-          <li><a href="#" class="btn btn-small" target="_blank">Log In</a></li>
-          <li><a href="#" class="btn btn-small" target="_blank">Sign Up</a></li>
+          <li>
+            <a href="#" class="btn btn-bordered" target="_blank">Log In</a>
+            <a href="#" class="btn" target="_blank">Sign Up</a>
+          </li>
         </ul>
       </nav>
 
@@ -66,19 +71,30 @@
 
   <main class="wrapper">
     <section class="heading">
-      <div class="heading-slide">
+
+      <div class="heading-slide" style="background-image: url('public/img/heading_slide.jpg')">
         <div class="container">
           <div class="heading-slide-container">
-            <a href="#" class="btn btn-small" target="_blank">Log In</a> <br>
+            <div class="heading-slide-txt">
+              <a href="#" class="btn btn-md btn-red" target="_blank">FREE</a> <br>
 
-            Complimentary Masterclass from Chef <br>
-            10:00 am - 17:00 pm <br>
-            and other timngs <br>
+              <h1>Complimentary Masterclass from Chef</h1>
+              <div class="heading-slide-time">
+                <span class="text-green">10:00</span> am -
+                <span class="text-green">17:00</span> pm <br>
+                <small>and other timngs</small>
+              </div>
+            </div>
 
-            08 Jun <br>
+            <div class="heading-slide-date">
+              <div>08</div>
+              <div class="month">Jun</div>
+            </div>
           </div>
         </div>
       </div>
+
+
     </section>
 
     <section class="scenes">
@@ -138,12 +154,12 @@
                 Joy Division <br>
                 ORGANIZER <br>
 
-                <a href="#" class="btn btn-small" target="_blank">Follow</a>
+                <a href="#" class="btn btn-sm btn-rounded" target="_blank">Follow</a>
               </div>
             </div>
 
             <div class="text-center">
-              <a href="#" class="btn btn-small" target="_blank">View all</a>
+              <a href="#" class="btn" target="_blank">View all</a>
             </div>
           </div>
         </div>
@@ -163,7 +179,7 @@
         </div>
 
         <div class="text-center">
-          <a href="#" class="btn btn-small" target="_blank">View all</a>
+          <a href="#" class="btn" target="_blank">View all</a>
         </div>
       </div>
     </section>
@@ -174,7 +190,7 @@
       <div class="map-container"></div>
 
       <div class="text-center">
-        <a href="#" class="btn btn-small" target="_blank">View all</a>
+        <a href="#" class="btn" target="_blank">View all</a>
       </div>
     </section>
 
@@ -246,9 +262,9 @@
         Your kind of scenes with your kind of people! Connect with both organizers and attendees!
       </p>
 
-      <img src="https://via.placeholder.com/190x55" alt="">  <br>
-      <img src="https://via.placeholder.com/190x55" alt="">  <br>
-      <img src="https://via.placeholder.com/690x300" alt="">  <br>
+      <img src="https://via.placeholder.com/190x55" alt=""> <br>
+      <img src="https://via.placeholder.com/190x55" alt=""> <br>
+      <img src="https://via.placeholder.com/690x300" alt=""> <br>
       <img src="https://via.placeholder.com/100x140" alt="">
     </section>
 
@@ -272,56 +288,134 @@
     </div>
   </main>
 
-  <section class="footer">
+  <footer class="footer">
+    <a href="#">
+      <svg width="27" height="14" viewBox="0 0 27 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1.09525 13.7295C1.45596 14.0902 2.04211 14.0902 2.40282 13.7295L13.9004 2.20939L25.4204 13.7295C25.7811 14.0902 26.3673 14.0902 26.728 13.7295C27.0887 13.3688 27.0887 12.7826 26.728 12.4219L14.5767 0.270588C14.3963 0.0902348 14.1709 5.81896e-05 13.9229 5.82083e-05C13.6975 5.82253e-05 13.4495 0.0902348 13.2691 0.270588L1.1178 12.4219C0.734548 12.7826 0.734549 13.3688 1.09525 13.7295Z"
+              fill="#50D2C2"/>
+      </svg>
+    </a>
     <div class="footer_wrapper">
       <div class="footer_logo">
         <a href="#home">
-          <img src="public/img/logo_m.svg" alt="BaseLanding">
+          <img src="public/img/logo.svg" alt="SCENE">
         </a>
+
+        <a href="#" class="btn" target="_blank">CLAIM OR PROMOTE YOUR SCENE</a>
+
+        <a href="#" class="btn" target="_blank">SELL TICKETS & OFFERS</a>
+
+        Now live in: <br>
+        <img src="https://via.placeholder.com/50x30" alt=""> <br>
+        <img src="https://via.placeholder.com/50x30" alt="">
       </div>
+
+
       <ul class="footer_links">
-        <li class="footer_links__item"><a href="https://attractgroup.com/" target="_blank">FAQ</a></li>
-        <li class="footer_links__item"><a href="https://attractgroup.com/" target="_blank">About Us</a></li>
-        <li class="footer_links__item"><a href="https://attractgroup.com/" target="_blank">Privacy Policy</a>
-        </li>
+        <li class="footer_links__item"><a href="#" target="_blank">Livefeed</a></li>
+        <li class="footer_links__item"><a href="#" target="_blank">Scenes</a></li>
+        <li class="footer_links__item"><a href="#" target="_blank">Organizer</a></li>
+        <li class="footer_links__item"><a href="#" target="_blank">Contact Us</a></li>
       </ul>
-      <div class="footer_social">
-        <a href="#" class="footer_social__item" target="_blank">
-          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-                    d="M20 40C31.0457 40 40 31.0457 40 20C40 8.9543 31.0457 0 20 0C8.9543 0 0 8.9543 0 20C0 31.0457 8.9543 40 20 40Z"
-                    fill="#3B5998"/>
-            <path
-                    d="M25.028 20.7828H21.4593V33.8571H16.0523V20.7828H13.4807V16.188H16.0523V13.2146C16.0523 11.0883 17.0623 7.75879 21.5074 7.75879L25.5125 7.77559V12.2356H22.6065C22.1299 12.2356 21.4596 12.4738 21.4596 13.4881V16.1923H25.5004L25.028 20.7828Z"
-                    fill="white"/>
+
+      <ul class="footer_links">
+        <li class="footer_links__item"><a href="#" target="_blank">Cookies</a></li>
+        <li class="footer_links__item"><a href="#" target="_blank">Terms of Use</a></li>
+        <li class="footer_links__item"><a href="#" target="_blank">Privacy</a></li>
+        <li class="footer_links__item"><a href="#" target="_blank">About Us: Behind the SCENE</a></li>
+        <li class="footer_links__item"><a href="#" target="_blank">Better Together</a></li>
+        <li class="footer_links__item"><a href="#" target="_blank">SCENE’s Archives</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>Subscribe To Our Weekly Newsletter</h3>
+      <form>
+        <input type="text" class="form-control form-control-white form-control-rounded" placeholder="Enter email">
+        <button class="btn btn-green">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"
+               xmlns:xlink="http://www.w3.org/1999/xlink">
+            <rect width="48" height="48" fill="url(#pattern0)"/>
+            <defs>
+              <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                <use xlink:href="#image0" transform="scale(0.02)"/>
+              </pattern>
+              <image id="image0" width="50" height="50"
+                     xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQwIDc5LjE2MDQ1MSwgMjAxNy8wNS8wNi0wMTowODoyMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTggKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MjBERkY2Rjk1MjJGMTFFOUIzNDRBNzNEODk0QzRFMjAiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MjBERkY2RkE1MjJGMTFFOUIzNDRBNzNEODk0QzRFMjAiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDoyMERGRjZGNzUyMkYxMUU5QjM0NEE3M0Q4OTRDNEUyMCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDoyMERGRjZGODUyMkYxMUU5QjM0NEE3M0Q4OTRDNEUyMCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pm9HcmEAAAJGSURBVHja7NlNSBRhHMdx3zKSwpDCoIygIDBQKqjIS92qQyQdChQ6SuEhRCToJtILeCyqQwWdIyLR9BBhdujgoYNFkGKQVJhgokZtrdP3wZ8wB3eaeXadSP4PfNh1duaZ57fPyzyLxUEQFK2GUlK0SooFsSAWxIJYEAtiQSyIBbEgFiRX2YBujCOLwEMGb9CG0kIFKU7ww6oSg9iJu3jreU/X+INoRg9OYyHvJC5ITN2YRV2Ca6I0BovlXCHqS9IjE3iMVuzFCH55fHdbsQYf1MPzOJHmHHENeIdyvMBTzZkkpR7DuK6/h0JtOKChVr3SQ8uV83p/FDMYRnXM6w9jGq+xZZnPd+AzRrA56dDyDeLswxe8VyOirj2GebzExojz9mBSYavSCuLswhg+RSwCZ/ATfaiIcR9Xz5R6uzJu+8rynGOjaMAzTdxTel0qLbiJV/oso6W36y/1zmA/+lR/Kk/23ajRStSPkzp+Cbf08DyEszr+HV8xHSGrcydXerIvOa6x/xyb8Ai/8UTnX0Ep7mMBF2Lc54jqHMDaNOZIY2jsr9Mx1+g7anR76Fz3vLqh4x0R92jAnL6YijQme5O++YcoX+bc7TnquKp6OnOsWN8wlDSET5BWdfcPPFAPJN1OXFZdtQrUG1qtbidZqXyDfNTwcO+3abj47o1q9DoYCpIXn01j/f++aQxv4+9pG+/zz5UyPUua/tU23lmPaxhHNvArGe2nLnrOsbx7xH6zWxALYkEsiAWxIBbEglgQC2JBCln+CDAAqJURaoEtnzkAAAAASUVORK5CYII="/>
+            </defs>
           </svg>
-        </a>
-        <a href="#" class="footer_social__item" target="_blank">
-          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-                    d="M20 40C31.0457 40 40 31.0457 40 20C40 8.9543 31.0457 0 20 0C8.9543 0 0 8.9543 0 20C0 31.0457 8.9543 40 20 40Z"
-                    fill="#55ACEE"/>
-            <path
-                    d="M32.2506 14.3733C31.3935 14.7534 30.4716 15.0104 29.5047 15.1252C30.4919 14.5338 31.2495 13.5979 31.6071 12.4809C30.6833 13.0289 29.6598 13.4264 28.5713 13.6407C27.6993 12.712 26.4568 12.1316 25.081 12.1316C22.4413 12.1316 20.3004 14.2724 20.3004 16.9121C20.3004 17.2868 20.3429 17.6515 20.4249 18.0016C16.4518 17.8023 12.929 15.8992 10.571 13.0061C10.1596 13.712 9.92362 14.5338 9.92362 15.4097C9.92362 17.0679 10.7682 18.5318 12.0502 19.3889C11.2669 19.3643 10.5293 19.1493 9.88512 18.7903C9.88472 18.8106 9.88472 18.8309 9.88472 18.8509C9.88472 21.1672 11.5333 23.0991 13.7198 23.538C13.3191 23.6478 12.8959 23.7059 12.4606 23.7059C12.1518 23.7059 11.8527 23.6763 11.5611 23.6207C12.1693 25.5196 13.9344 26.9018 16.0268 26.9406C14.3904 28.223 12.3294 28.9871 10.089 28.9871C9.70402 28.9871 9.32252 28.9646 8.94922 28.92C11.0637 30.2769 13.5772 31.0681 16.2768 31.0681C25.0699 31.0681 29.8787 23.7837 29.8787 17.4658C29.8787 17.2587 29.874 17.0522 29.8648 16.8476C30.7996 16.1738 31.6099 15.332 32.2506 14.3733Z"
-                    fill="#F1F2F2"/>
-          </svg>
-        </a>
-        <a href="#" class="footer_social__item" target="_blank">
-          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-                    d="M20 40C31.0457 40 40 31.0457 40 20C40 8.9543 31.0457 0 20 0C8.9543 0 0 8.9543 0 20C0 31.0457 8.9543 40 20 40Z"
-                    fill="#DC4E41"/>
-            <path
-                    d="M11.9245 20.8953C11.763 16.6431 15.4875 12.7136 19.744 12.6626C21.9134 12.4776 24.024 13.32 25.6658 14.6941C24.9923 15.4345 24.3071 16.1665 23.5752 16.8517C22.1298 15.9736 20.3897 15.3044 18.7005 15.8987C15.976 16.6745 14.326 19.8914 15.3342 22.5567C16.1692 25.3404 19.555 26.8681 22.2086 25.6987C23.5826 25.2067 24.4886 23.939 24.8861 22.5767C23.3113 22.5453 21.7362 22.5649 20.1615 22.5214C20.1576 21.5845 20.1536 20.6511 20.1576 19.7142C22.7837 19.7103 25.4137 19.7024 28.0438 19.726C28.2053 22.0216 27.8666 24.4784 26.3742 26.3209C24.3306 28.9509 20.5551 29.7228 17.4837 28.691C14.224 27.6204 11.8535 24.3365 11.9245 20.8953Z"
-                    fill="white"/>
-          </svg>
-        </a>
+        </button>
+      </form>
+    </div>
+
+    <div>
+      <img src="https://via.placeholder.com/190x55" alt=""> <br>
+      <img src="https://via.placeholder.com/190x55" alt=""> <br>
+    </div>
+
+    <div>
+      <h4>Popular searches:</h4>
+
+      <div>
+        <ul>
+          <li>Events in Dubai</li>
+          <li>Events in Abu Dhabi</li>
+          <li>iteConcerts in Dubaim</li>
+          <li>Concerts in Abu Dhabi</li>
+          <li>Concerts in the UAE</li>
+          <li>Sports events in the UAE</li>
+          <li>Nightlife in Dubai</li>
+          <li>Nightlife in Abu Dhabi</li>
+        </ul>
+
+        <ul>
+          <li>Brunches in Dubai</li>
+          <li>Brunches in Abu Dhabi</li>
+          <li>Tourism and Local Destinations</li>
+          <li>Arts and Culture in Dubai</li>
+          <li>Arts and Culture in Abu Dhabi</li>
+          <li>Arts and Culture in the UAE</li>
+        </ul>
       </div>
     </div>
-    <div class="copyright">
-      <p class="copyright_wrapper">© 2019 copyright BaseLanding all right reserved</p>
+
+    <div>
+      <h4>Stay tuned to what the city is up to! Follow us:</h4>
+      <a href="#">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M18.82 5.11709C20.0187 5.18582 20.6075 5.36655 21.15 6.34909C21.715 7.33036 22 9.02055 22 11.9975V12.0013V12.0076C22 14.9705 21.715 16.6735 21.1513 17.6445C20.6088 18.6271 20.02 18.8053 18.8213 18.888C17.6225 18.958 14.6112 19 12.0025 19C9.38875 19 6.37625 18.958 5.17875 18.8867C3.9825 18.804 3.39375 18.6258 2.84625 17.6433C2.2875 16.6722 2 14.9693 2 12.0064V12.0038V12V11.9962C2 9.02055 2.2875 7.33036 2.84625 6.34909C3.39375 5.36527 3.98375 5.18582 5.18 5.11582C6.37625 5.03436 9.38875 5 12.0025 5C14.6112 5 17.6225 5.03436 18.82 5.11709ZM15.75 11.9988L9.5 8.18066V15.817L15.75 11.9988Z"
+                fill="white"/>
+        </svg>
+      </a>
+      <a href="#">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 7.5377C19.4111 7.79864 18.7792 7.97561 18.1153 8.05461C18.7932 7.64868 19.3121 7.00481 19.558 6.23995C18.9222 6.61587 18.2203 6.88884 17.4724 7.03681C16.8735 6.39793 16.0217 6 15.0769 6C13.2642 6 11.7945 7.46973 11.7945 9.28139C11.7945 9.53833 11.8235 9.78928 11.8795 10.0293C9.152 9.89226 6.73346 8.58552 5.11477 6.59987C4.83182 7.08379 4.67085 7.64766 4.67085 8.24957C4.67085 9.38837 5.25075 10.3932 6.13059 10.981C5.59268 10.9631 5.08677 10.8151 4.64387 10.5691V10.6101C4.64387 12.1998 5.77566 13.5266 7.27637 13.8285C7.00141 13.9025 6.71148 13.9435 6.41153 13.9435C6.19958 13.9435 5.99461 13.9225 5.79365 13.8825C6.21156 15.1873 7.42335 16.1361 8.85909 16.1621C7.73629 17.0419 6.32055 17.5648 4.78285 17.5648C4.51791 17.5648 4.25694 17.5488 4 17.5198C5.45273 18.4527 7.17741 18.9966 9.03106 18.9966C15.0689 18.9966 18.3693 13.9955 18.3693 9.65833L18.3583 9.23341C19.0032 8.77346 19.561 8.19558 20 7.5377Z"
+                fill="white"/>
+        </svg>
+      </a>
+      <a href="#">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12.9563 9.2372V7.86001C12.9563 7.65327 12.9658 7.49313 12.9852 7.38001C13.0044 7.26672 13.0483 7.1553 13.1163 7.0453C13.1842 6.93537 13.2941 6.85948 13.446 6.81743C13.598 6.7753 13.8001 6.75431 14.0523 6.75431H15.4295V4H13.2279C11.954 4 11.0391 4.30223 10.483 4.9067C9.92696 5.5113 9.64899 6.40187 9.64899 7.57873V9.23716H8V11.9917H9.64888V19.9834H12.9563V11.9917H15.1577L15.4487 9.2372H12.9563Z"
+                fill="white"/>
+        </svg>
+      </a>
+      <a href="#">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M17.9466 4H6.0544C4.92459 4 4 4.92395 4 6.05376V17.9459C4 19.0754 4.92459 19.9987 6.0544 19.9987H17.9466C19.0764 19.9987 20 19.0754 20 17.9459V6.05376C20 4.92395 19.0764 4 17.9466 4ZM14.9355 6.49672C14.9355 6.10024 15.2591 5.77539 15.6558 5.77539H17.464C17.86 5.77539 18.1843 6.10024 18.1843 6.49672V8.22014C18.1843 8.61678 17.86 8.94088 17.464 8.94088H15.6558C15.2591 8.94088 14.9355 8.61678 14.9355 8.22014V6.49672ZM18.1912 10.7656H16.7834C16.9169 11.2016 16.9892 11.6614 16.9892 12.1394C16.9892 14.7998 14.7617 16.9576 12.0151 16.9576C9.26909 16.9576 7.04151 14.7998 7.04151 12.1394C7.04151 11.6614 7.11458 11.2016 7.24743 10.7656H5.77869V17.5247C5.77869 17.8747 6.0645 18.1594 6.41421 18.1594H17.5559C17.9059 18.1594 18.1912 17.8747 18.1912 17.5247V10.7656ZM8.80225 11.9656C8.80225 10.2451 10.2412 8.85156 12.015 8.85156C13.7899 8.85156 15.2289 10.245 15.2289 11.9656C15.2289 13.6844 13.7899 15.0789 12.015 15.0789C10.2412 15.0789 8.80225 13.6844 8.80225 11.9656Z"
+                fill="white"/>
+        </svg>
+      </a>
     </div>
-  </section>
+
+    <div class="copyright">
+      <p class="copyright_wrapper">
+        © 2019 Scene Social App.Trademarked, copyrighted and registered by SCENE
+        Social Entertainment Holdings LTD. All Rights Reserved.
+      </p>
+    </div>
+  </footer>
 </div>
 
 </body>
