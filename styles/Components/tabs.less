@@ -1,0 +1,41 @@
+.tabs {
+  display: flex;
+  padding: 0 22px;
+  justify-content: center;
+  background: @color_black;
+}
+
+.tab-item {
+  padding: 20px 10px;
+  width: 100%;
+  color: @color_white;
+  font-weight: 500;
+  .line-height(16, 16);
+  text-align: center;
+  text-transform: uppercase;
+  border-bottom: 6px solid transparent;
+  cursor: pointer;
+  transition: @transition;
+
+  &:hover,
+  &.active {
+    border-bottom: 6px solid @color_green;
+  }
+}
+
+[data-tab] {
+  z-index: -1;
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  transition: @transition;
+  overflow: hidden;
+
+  &.active {
+    position: static;
+    opacity: 1;
+    height: auto;
+    z-index: 0;
+    overflow: visible;
+  }
+}

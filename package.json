@@ -32,6 +32,7 @@
   },
   "dependencies": {
     "jquery": "3.2.1",
+    "google-maps": "^3.3.0",
     "natives": "^1.1.6",
     "remodal": "1.1.1",
     "slick-carousel": "^1.8.1",

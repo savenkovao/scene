@@ -14,16 +14,16 @@ let gulp = require('gulp'),
   runSequence = require('run-sequence'),
 webserver = require('gulp-webserver');
 
-gulp.task('webserver', function() {
-  gulp.src('')
-    .pipe(webserver({
-      host: '0.0.0.0',
-      // livereload: true,
-      directoryListing: false,
-      open: true,
-      fallback: 'index.html'
-    }));
-});
+// gulp.task('webserver', function() {
+//   gulp.src('')
+//     .pipe(webserver({
+//       host: '0.0.0.0',
+//       // livereload: true,
+//       directoryListing: false,
+//       open: true,
+//       fallback: 'index.html'
+//     }));
+// });
 
 require('any-promise/register')('bluebird');
 
@@ -119,7 +119,7 @@ gulp.task('watch', function () {
 });
 
 gulp.task('default', function (callback) {
-  runSequence('script-concat', 'less', 'fonts', 'img'/*, 'hash'*/, 'watch', 'webserver', callback);
+  runSequence('script-concat', 'less', 'fonts', 'img'/*, 'hash'*/, 'watch'/*, 'webserver'*/, callback);
 });
 
 gulp.task('prod', function (callback) {

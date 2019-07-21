@@ -5,25 +5,24 @@ h1, .h1{
   font-weight: 300;
   margin: 0;
 }
+
 h2, .h2{
-  .font-size(52);
-  .line-height(52, 62);
-  font-weight: bold;
-  margin: 0 auto 0.769em;
+  .font-size(48);
+  .line-height(48, 50);
+  font-weight: 300;
+  margin: 0 auto 80px;
 }
 
 h3, .h3{
-  .line-height(24, 28);
-  font-weight: 500;
+  .line-height(30, 40);
+  font-weight: 400;
   margin: 0 0 16px 0;
 }
+
 h4, .h4{
-  .font-size(27);
-  .line-height(27, 32);
-  font-style: italic;
-  font-weight: normal;
-  color: #CACFD5;
-  margin: 0 0 40px 0;
+  .line-height(24, 32);
+  font-weight: 400;
+  margin: 0;
 }
 
 h5, .h5{
@@ -165,6 +164,11 @@ h4, .h4, h5, .h5, p, .ul, .ul li,
   color: @color_grey;
 }
 
+hr {
+  margin: 15px 0;
+  border: none;
+  border-bottom: 1px solid @color_grey_light;
+}
 
 @media @mobile {
   h1, .h1 {

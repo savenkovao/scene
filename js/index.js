@@ -2,9 +2,9 @@ import $ from 'jquery';
 import { HeaderComponent } from './Components/Header';
 import { FeedbackSliderComponent } from './Components/FeedbackSlider';
 import { SubscribePopupComponent } from './Components/SubscribePopup';
-import { ClipboardComponent } from './Components/Clipboard';
+import { Map } from './Components/Map';
 import { ScrollModule } from './Modules/ScrollModule';
-import { YoutubeVideoFrame } from './Components/YoutubeVideoFrame';
+import {Tabs} from "./Components/Tabs";
 
 
 
@@ -17,15 +17,17 @@ class App {
   }
 
   _initModules() {
-    this.FeedbackSliderComponent = new FeedbackSliderComponent();
     new ScrollModule();
+    this.FeedbackSliderComponent = new FeedbackSliderComponent();
     this.SubscribePopupComponent = new SubscribePopupComponent();
   }
 
   _initComponents() {
     new HeaderComponent();
-    this.clipboardComponent = new ClipboardComponent();
-    this.YoutubeVideoFrame = new YoutubeVideoFrame();
+    new Tabs();
+    this.map = new Map({
+      selector : '#map'
+    });
   }
 }
 

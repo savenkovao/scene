@@ -62,4 +62,41 @@
       border: 1px solid @color_green;
     }
   }
+
+  &.btn-view-all {
+    width: 100%;
+    max-width: 260px;
+  }
+}
+
+.pallet {
+  display: inline-block;
+  padding: 3px 15px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  min-height: 18px;
+  background-color: @color_green;
+  text-transform: uppercase;
+  font-weight: bold;
+  .font-size(12);
+  color: @color_white;
+  border-radius: 4px;
+
+
+  &.pallet-red {
+    background-color: @color_red;
+
+  }
+
+  &.pallet-orange {
+    background-color: #FAA740;
+    color: @color_black;
+
+  }
+
+  &.pallet-long {
+    margin-left: 0;
+    border-radius:0 4px 4px 0;
+  }
+
 }
