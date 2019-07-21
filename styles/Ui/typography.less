@@ -1,4 +1,4 @@
-h1, .h1{
+h1, .h1 {
   position: relative;
   .font-size(52);
   .line-height(52, 60);
@@ -6,51 +6,49 @@ h1, .h1{
   margin: 0;
 }
 
-h2, .h2{
+h2, .h2 {
   .font-size(48);
   .line-height(48, 50);
   font-weight: 300;
-  margin: 0 auto 80px;
+  margin: 0 auto 70px;
 }
 
-h3, .h3{
+h3, .h3 {
   .line-height(30, 40);
-  font-weight: 400;
+  font-weight: 300;
   margin: 0 0 16px 0;
 }
 
-h4, .h4{
+h4, .h4 {
   .line-height(24, 32);
   font-weight: 400;
   margin: 0;
 }
 
-h5, .h5{
-  .font-size(20);
-  .line-height(20, 23);
+h5, .h5 {
+  .line-height(18, 23);
   font-weight: normal;
-  text-transform: uppercase;
-  color: #CACFD5;
-  margin: 0 6px 0;
+  margin: 0 0 15px;
 }
 
-p {
+
+h6, .h6 {
+  .line-height(16, 20);
+  font-weight: 700;
+  margin: 0 0 10px;
+}
+
+p, .p {
   font-weight: 400;
   .line-height(16, 18);
   margin: 0;
-}
-
-.p{
-  .line-height(12, 17);
-  font-weight: 700;
-  color: #000;
 }
 
 .ul {
   margin: 0;
   padding: 20px 0 10px;
 
-  color: #177565;
+  color: @color_green;
   list-style-type: none;
 
   li {
@@ -60,7 +58,7 @@ p {
     margin-bottom: 25px;
     .font-size(12);
 
-    &.no-list-icon{
+    &.no-list-icon {
       padding-left: 0;
 
       &::before {
@@ -91,7 +89,7 @@ p {
 
 }
 
-.sub-title{
+.sub-title {
   .font-size(14);
   font-weight: 900;
 }
@@ -100,10 +98,9 @@ small {
   .font-size(14);
 }
 
-.notation{
-  .line-height(12, 17);
-  font-weight: 900;
-  color: @color_grey;
+.notation {
+  .line-height(12, 14);
+  font-weight: 400;
 }
 
 .text-bold {
@@ -113,12 +110,15 @@ small {
 .text-left {
   text-align: left;
 }
+
 .text-right {
   text-align: right;
 }
+
 .text-center {
   text-align: center;
 }
+
 .text-justify {
   text-align: justify;
 }
@@ -142,6 +142,7 @@ small {
     text-decoration: underline;
   }
 }
+
 h1, .h1, h2, .h2, h3, .h3,
 h4, .h4, h5, .h5, p, .ul, .ul li,
 .sub-title, .notation, .link {
@@ -157,11 +158,19 @@ h4, .h4, h5, .h5, p, .ul, .ul li,
 }
 
 .text-black {
-  color: #000;
+  color: @color_black;
 }
 
-.text-grey{
+.text-grey {
   color: @color_grey;
+}
+
+.text-purple {
+  color: @color_purple;
+}
+
+.text-white {
+  color: @color_white;
 }
 
 hr {
@@ -174,6 +183,7 @@ hr {
   h1, .h1 {
     .font-size(50);
   }
+
   h2, .h2 {
     .font-size(40);
   }
