@@ -1,7 +1,6 @@
 import $ from 'jquery';
 import { HeaderComponent } from './Components/Header';
 import { FeedbackSliderComponent } from './Components/FeedbackSlider';
-import { SubscribePopupComponent } from './Components/SubscribePopup';
 import { Map } from './Components/Map';
 import { ScrollModule } from './Modules/ScrollModule';
 import {Tabs} from "./Components/Tabs";
@@ -19,7 +18,6 @@ class App {
   _initModules() {
     new ScrollModule();
     this.FeedbackSliderComponent = new FeedbackSliderComponent();
-    this.SubscribePopupComponent = new SubscribePopupComponent();
   }
 
   _initComponents() {

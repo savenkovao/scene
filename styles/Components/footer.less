@@ -6,6 +6,7 @@
   background: @color_black;
   color: @color_white;
 }
+
 .footer-wrapper {
   padding: 0 60px;
 }
@@ -45,6 +46,26 @@
 .footer-btns {
   float: left;
   width: 18.8%;
+
+  .btn {
+    width: 260px;
+    margin-bottom: 15px;
+  }
+
+  small {
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+
+.footer-flags {
+  display: flex;
+
+  img {
+    display: inline-block;
+    height: 25px;
+    margin-right: 8px;
+  }
 }
 
 .footer-links-cont {
@@ -95,6 +116,13 @@
   width: 80%;
   max-width: 360px;
   margin: 0 auto;
+
+  .btn {
+    background-size: 45px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../img/envelope.svg");
+  }
 }
 
 .footer-apps {
@@ -113,37 +141,66 @@
 
 .footer-popular {
   width: 77.2%;
-  max-width: 1220px;
+  max-width: 1250px;
   float: left;
   padding: 60px 0 0 3%;
 }
 
 .footer-popular-list {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
   .clearListStyles();
 
   &:first-child {
-    margin-bottom: 25px;
+    margin-bottom: 10px;
   }
 
   li {
     margin-right: 25px;
+    margin-bottom: 15px;
 
     &:last-child {
       margin-right: 0;
     }
 
-    a {
-      text-decoration: none;
-      color: @color_purple;
-    }
+  }
+
+
+  a {
+    .font-size(14);
+    text-decoration: none;
+    color: @color_purple;
   }
 }
 
 .footer-socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 60px;
+
+  h5 {
+    font-weight: 500;
+  }
+
+  a {
+    display: inline-block;
+    margin-left: 15px;
+
+    svg {
+      height: 24px;
+
+      path {
+        transition: @transition;
+      }
+    }
+
+    &:hover {
+      svg path {
+        fill: @color_red;
+      }
+    }
+  }
 }
 
 

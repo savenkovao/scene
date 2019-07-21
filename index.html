@@ -23,7 +23,7 @@
 </head>
 <body>
 <div class="remodal-bg" id="home">
-  <header id="header" class="header">
+  <header id="header" class="header animated fadeInDown">
     <div class="header-content container">
       <div class="header-left">
         <div class="logo">
@@ -65,14 +65,14 @@
             <a href="#" class="btn" target="_blank">Sign Up</a>
           </li>
         </ul>
-      </nav>
 
-      <div class="brgr-menu"></div>
+        <div class="brgr-menu"></div>
+      </nav>
     </div>
   </header>
 
   <main class="wrapper">
-    <section class="heading" id="heading">
+    <section class="heading" id="heading" data-toggle-header>
 
       <div class="heading-slide" style="background-image: url('public/img/heading_slide.jpg')">
         <div class="container">
@@ -99,6 +99,29 @@
             </div>
           </div>
         </div>
+
+        <!-- Search Form for mobiles -->
+        <div class="header-search-mobile">
+          <form class="header-search-form">
+            <label class="form-label">
+              <input class="form-control" type="text" placeholder="Search by keyword">
+            </label>
+
+            <label class="form-label">
+              <select class="form-control">
+                <option value="">Item</option>
+                <option value="">Item</option>
+                <option value="">Item</option>
+                <option value="">Item</option>
+              </select>
+            </label>
+            <button class="btn btn-red">Go</button>
+          </form>
+          <p>
+            Social discovery platfrom and network for entertainment and city experiences.
+          </p>
+        </div>
+        <!-- Search Form for mobiles -->
 
         <a href="#" class="header-scroll-btn">
           <svg width="68" height="68" viewBox="0 0 68 68" fill="none"
@@ -1213,13 +1236,15 @@
 
           <a href="#" class="btn btn-lg btn-red" target="_blank">SELL TICKETS & OFFERS</a>
 
-          Now live in: <br>
-          <img src="https://via.placeholder.com/50x30" alt=""> <br>
-          <img src="https://via.placeholder.com/50x30" alt="">
+          <small>Now live in:</small>
+          <div class="footer-flags">
+            <img src="public/img/flag_uae.png" alt="UAE flag">
+            <img src="public/img/flag_lb.png" alt="Lebanon flag">
+          </div>
         </div>
 
         <div class="footer-popular">
-          <h6 class="m-b-30">Popular searches:</h6>
+          <div class="h6 m-b-30">Popular searches:</div>
 
           <div>
             <ul class="footer-popular-list">
@@ -1246,7 +1271,8 @@
       </div>
 
       <div class="footer-socials text-center clearfix">
-        <h4>Stay tuned to what the city is up to! Follow us:</h4>
+        <div class="h5 m-b-0">Stay tuned to what the city is up to! Follow us:</div>
+
         <a href="#">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd"

@@ -1,12 +1,12 @@
 import $ from 'jquery';
-import { BaseComponent } from '../Base/BaseComponent';
-
+import {BaseComponent} from '../Base/BaseComponent';
 
 
 export class HeaderComponent extends BaseComponent {
 
   constructor() {
     super();
+    this.toggleHeaderType()
   }
 
   _events() {
@@ -19,7 +19,7 @@ export class HeaderComponent extends BaseComponent {
     });
 
     $(document).on('click', '.menu a', (e) => {
-      if(window.matchMedia('(max-width: 1024px)').matches) {
+      if (window.matchMedia('(max-width: 1024px)').matches) {
         toggleMobileMenu();
       }
     });
@@ -32,7 +32,7 @@ export class HeaderComponent extends BaseComponent {
     }
 
     $(window).on('resize', (e) => {
-      if(window.matchMedia('(min-width: 1121px)').matches) {
+      if (window.matchMedia('(min-width: 1121px)').matches) {
         $('.menu').removeAttr('style');
         $('.brgr-menu').removeClass('active');
         $('.header-transp').removeClass('collapsed');
@@ -41,6 +41,20 @@ export class HeaderComponent extends BaseComponent {
     });
 
 
+    $(window).on('scroll', (e) => {
+      this.toggleHeaderType()
+    });
   }
 
+  toggleHeaderType() {
+    let $header = $('#header');
+    let $headerToggleElem = $('[data-toggle-header]');
+    let toggleHeight = $headerToggleElem.offset().top + $headerToggleElem.outerHeight()
+
+    if (window.pageYOffset > toggleHeight && !$header.hasClass('scrolled')) {
+      $header.addClass('scrolled fadeInDown');
+    } else if (window.pageYOffset <= toggleHeight) {
+      $header.removeClass('scrolled fadeInDown');
+    }
+  }
 }

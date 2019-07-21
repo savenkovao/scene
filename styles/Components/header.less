@@ -1,5 +1,4 @@
 .header {
-  position: fixed;
   position: absolute;
   top: 0;
   left: 0;
@@ -11,6 +10,32 @@
 
   .mobile-only {
     display: none;
+  }
+
+  &.scrolled{
+    position: fixed;
+    background-color: @color_black;
+
+    .header-content {
+      padding: 5px 20px;
+      align-items: center;
+    }
+
+    .nav {
+      padding: 0 0 0 20px;
+    }
+
+    .logo {
+      width: 40px;
+    }
+
+    .header-search p {
+      display: none;
+    }
+
+    .header-search-form {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -25,6 +50,7 @@
 
 .logo{
   width: 90px;
+
   img {
     display: inline-block;
     width: 100%;
@@ -131,58 +157,54 @@
   }
 }
 
-.register {
-  //position: absolute;
-  //right: 20px;
-}
-
-.header-contact {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 26px;
-  height: 26px;
-  margin-left: 15px;
-  border-radius: 50%;
-  background-color: @color_green;
-  margin-right: 10px;
-  transition: .2s;
-
-  &.ru,
-  &.en {
-    &::before {
-      content: 'en';
-      display: block;
-      position: absolute;
-      top: -7px;
-      right: -10px;
-      font-weight: bold;
-      font-size: 9px;
-      text-align: center;
-      color: @color_green;
-      text-transform: uppercase;
-    }
-  }
-
-  &.ru {
-    &::before {
-      content: 'ru';
-    }
-  }
-
-
-  &:hover,
-  &:active,
-  &:focus {
-    background-color: darken(@color_green, 7%);
-  }
-}
+.header-search-mobile,
 .brgr-menu {
   display: none;
 }
 
-@media @tabletLg {
+
+
+@media @screenLg {
+  .header-left {
+    width: 50%;
+  }
+
+  .nav {
+    width: 50%
+  }
+}
+
+@media @screenMd {
+  .header-search {
+    padding-left: 20px;
+    p {
+      .font-size(14);
+    }
+  }
+}
+
+@media @laptopLg {
+  .header-left {
+    width: ~'calc(100% - 50px)';
+    max-width: 750px;
+  }
+
+  .nav {
+    width: 50px;
+  }
+
+
+  .logo {
+    width: 70px;
+  }
+
+  .header-search {
+    padding-left: 40px;
+    p {
+      .font-size(14);
+    }
+  }
+
   .menu {
     display: none;
     position: fixed;
@@ -211,23 +233,23 @@
 
   .brgr-menu {
     display: block;
-    position: absolute;
-    right: -40px;
-    width: 22px;
-    height: 15px;
+    //position: absolute;
+    //right: 20px;
+    width: 32px;
+    height: 23px;
+    //top: 50%;
+    //transform: translateY(-50%);
     background-color: #fff;
     cursor: pointer;
     user-select: none;
-    margin-left: 30px;
+    //margin-left: 30px;
     order: 1;
 
-    &::before,
     &::after {
       content: '';
       position: absolute;
       width: 100%;
       height: 3px;
-      background-color: #44566C;
       top: 3px;
       transition: .2s;
     }
@@ -256,85 +278,58 @@
   }
 }
 
+@media @tabletLg {
+}
+
 @media @mobileLg {
-  .header-transp {
+  .header-search {
     display: none;
   }
 
-  .header-white {
-    padding: 20px;
+  .header-left {
+    width: 150px;
+    max-width: none;
+  }
 
-    .menu {
-      top: 79px;
-      height: ~'calc(100vh - 79px)';
+  .header-search-mobile {
+    display: block;
+    position: absolute;
+    top: 130px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 0 30px;
 
-      li {
-        max-width: 600px;
-      }
+    .header-search-form {
+      display: block;
+      margin: 0 auto 10px;
+      max-width: 400px;
     }
+
+    .form-label {
+      padding-right: 0;
+      margin-bottom: 10px;
+    }
+
+
+    .btn {
+      width: 100%;
+    }
+
+    p {
+      text-align: center;
+      margin: 0 auto;
+      max-width: 400px;
+
+
+    }
+  }
+
+
+  .logo {
+    width: 50px;
   }
 }
 
 @media @mobile {
-  .header {
-    .logo {
-      left: 0;
-
-      img {
-        height: 35px;
-      }
-    }
-    &-content {
-      padding: 15px 0;
-    }
-    .desktop-only {
-      display: none;
-    }
-    .mobile-only {
-      display: block;
-    }
-  }
-}
-
-@media @h700 and (max-width: 993px) and (max-width: 1280px) {
-  .header-login {
-    height: 80px;
-  }
-  .menu {
-    top: 80px;
-    height: ~'calc(100vh - 80px)';
-  }
-  .panel {
-    padding: 80px 35px 35px;
-  }
-}
-
-@media @h650 and (min-width: 993px) and (max-width: 1280px)  {
-  .header-login {
-    height: 60px;
-  }
-
-  .menu {
-    top: 60px;
-    height: ~'calc(100vh - 60px)';
-  }
-
-  .panel {
-    padding: 60px 35px 35px;
-  }
-}
-
-@media @h600 and (min-width: 993px) and (max-width: 1280px)  {
-  .header-login {
-    height: 50px;
-  }
-
-  .menu {
-    top: 50px;
-    height: ~'calc(100vh - 50px)';
-  }
-
-  .panel {
-    padding: 50px 35px 35px;
-  }
 }
