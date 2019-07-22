@@ -9,25 +9,27 @@ export class FeedbackSliderComponent extends BaseComponent {
   constructor() {
     super();
 
-    this.sliderSelector = '#feedbackSlider';
-    this.sliderOpt = {
-      dots: true,
+    this.headingSliderSelector = '#heading-slider';
+    this.happeningSliderSelector = '#happening-list';
+    this.headingSliderOpt = {
+      dots: false,
       accessibility: true,
-      slidesToShow : 2,
+      slidesToShow : 1,
       slidesToScroll : 1,
       infinite : true,
-      arrows: false,
+      arrows: true,
       centerMode: false,
       focusOnSelect: true,
-      // responsive : [
-      //   {
-      //     breakpoint : 767,
-      //     settings: {
-      //       slidesToShow : 1,
-      //       slidesToScroll : 1,
-      //     }
-      //   }
-      // ]
+    };
+    this.happeningSliderOpt = {
+      dots: false,
+      accessibility: true,
+      slidesToShow : 6,
+      slidesToScroll : 1,
+      infinite : true,
+      arrows: true,
+      centerMode: false,
+      focusOnSelect: true,
     };
 
     this._initSlider();
@@ -47,12 +49,13 @@ export class FeedbackSliderComponent extends BaseComponent {
   }
 
   _initSlider() {
-    this.feedbackSlider = new Slider(this.sliderSelector, this.sliderOpt);
+    this.headingSlider = new Slider(this.headingSliderSelector, this.headingSliderOpt);
+    this.happeningSlider = new Slider(this.happeningSliderSelector, this.happeningSliderOpt);
   }
 
   _resizeSliders() {
-    if(window.matchMedia('(min-width: 640px)').matches && !this.feedbackSlider.hasClass('slick-slider')) {
-      this.feedbackSlider = new Slider(this.sliderSelector, this.sliderOpt);
-    }
+    // if(window.matchMedia('(min-width: 640px)').matches && !this.headingSlider.hasClass('slick-slider')) {
+    //   this.headingSlider = new Slider(this.headingSliderSelector, this.headingSliderOpt);
+    // }
   }
 }

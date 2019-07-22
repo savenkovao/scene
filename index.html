@@ -60,6 +60,7 @@
           <li><a href="#livefeed">Livefeed</a></li>
           <li><a href="#scenes">Scenes</a></li>
           <li><a href="#organizer">Organizer</a></li>
+          <li class="menu-contact"><a href="#contact-us">Contact Us</a></li>
           <li class="menu-btns">
             <a href="#" class="btn btn-bordered" target="_blank">Log In</a>
             <a href="#" class="btn" target="_blank">Sign Up</a>
@@ -104,6 +105,7 @@
             </a>
           </li>
         </ul>
+
         <div class="brgr-close"></div>
 
         <div class="menu-logo">
@@ -119,35 +121,73 @@
 
   <main class="wrapper">
     <section class="heading" id="heading" data-toggle-header>
+      <div class="heading-slider" id="heading-slider">
+        <!-- slide -->
+        <div>
+          <div class="heading-slide" style="background-image: url('public/img/heading_slide.jpg')">
+            <div class="container">
+              <div class="heading-slider">
+                <div class="heading-slide-container">
+                  <div class="heading-slide-txt">
+                    <!--                <a href="#" class="btn btn-md btn-red" target="_blank">FREE</a> <br>-->
+                    <div class="pallet pallet-lg pallet-red">FREE</div>
+                    <br>
 
-      <div class="heading-slide" style="background-image: url('public/img/heading_slide.jpg')">
-        <div class="container">
+                    <h1>Complimentary Masterclass from Chef</h1>
+                    <div class="heading-slide-time">
+                      <span class="text-green">10:00</span> am -
+                      <span class="text-green">17:00</span> pm <br>
+                      <small>and other timngs</small>
+                    </div>
+                  </div>
 
-          <div class="heading-slider">
-            <div class="heading-slide-container">
-              <div class="heading-slide-txt">
-                <!--                <a href="#" class="btn btn-md btn-red" target="_blank">FREE</a> <br>-->
-                <div class="pallet pallet-lg pallet-red">FREE</div>
-                <br>
-
-                <h1>Complimentary Masterclass from Chef</h1>
-                <div class="heading-slide-time">
-                  <span class="text-green">10:00</span> am -
-                  <span class="text-green">17:00</span> pm <br>
-                  <small>and other timngs</small>
-                </div>
-              </div>
-
-              <div class="c-date c-date-lg c-date-white">
-                <div>
-                  <div>08</div>
-                  <div class="month">Jun</div>
+                  <div class="c-date c-date-lg c-date-white">
+                    <div>
+                      <div>08</div>
+                      <div class="month">Jun</div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        <!-- slide -->
 
+        <!-- slide -->
+        <div>
+          <div class="heading-slide" style="background-image: url('public/img/heading_slide.jpg')">
+            <div class="container">
+              <div class="heading-slider">
+                <div class="heading-slide-container">
+                  <div class="heading-slide-txt">
+                    <!--                <a href="#" class="btn btn-md btn-red" target="_blank">FREE</a> <br>-->
+                    <div class="pallet pallet-lg pallet-red">FREE</div>
+                    <br>
+
+                    <h1>Complimentary Masterclass from Chef</h1>
+                    <div class="heading-slide-time">
+                      <span class="text-green">10:00</span> am -
+                      <span class="text-green">17:00</span> pm <br>
+                      <small>and other timngs</small>
+                    </div>
+                  </div>
+
+                  <div class="c-date c-date-lg c-date-white">
+                    <div>
+                      <div>08</div>
+                      <div class="month">Jun</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- slide -->
+      </div>
+
+      <div>
         <!-- Search Form for mobiles -->
         <div class="header-search-mobile">
           <form class="header-search-form">
@@ -171,7 +211,7 @@
         </div>
         <!-- Search Form for mobiles -->
 
-        <a href="#" class="header-scroll-btn">
+        <a href="#scenes" class="header-scroll-btn" data-go-down>
           <svg width="68" height="68" viewBox="0 0 68 68" fill="none"
                xmlns="http://www.w3.org/2000/svg">
             <circle cx="34" cy="34" r="19" stroke="white" stroke-width="2"/>
@@ -216,7 +256,7 @@
     <section class="scenes">
       <div class="container">
         <div class="container-with-aside">
-          <aside class="aside">
+          <aside class="aside" id="livefeed">
             <div class="panel-title panel-feed">LiVefeed</div>
 
             <div class="feed-content" data-tabs>
@@ -509,7 +549,7 @@
             </div>
           </aside>
 
-          <div class="container-content scenes-content">
+          <div class="container-content scenes-content" id="scenes">
             <div class="panel-title panel-scenes">Scenes</div>
 
             <div class="scenes-list">
@@ -1048,7 +1088,7 @@
       <div class="container">
         <h2 class="text-center">Happening scenes</h2>
 
-        <div class="happening-list">
+        <div class="happening-list" id="happening-list">
           <!-- happening item-->
           <a href="#" class="happening-item" style="background-image: url('public/img/happening_img.jpg')">
             <div class="happening-item-txt">
@@ -1227,7 +1267,7 @@
   </main>
 
   <footer class="footer">
-    <a href="#heading" class="footer-go-up" title="Go up"></a>
+    <a href="#heading" class="footer-go-up" title="Go up" data-go-up></a>
 
     <div class="footer-wrapper">
       <div class="footer-top clearfix">
