@@ -1,13 +1,11 @@
 h1, .h1 {
   position: relative;
-  .font-size(52);
   .line-height(52, 60);
   font-weight: 300;
   margin: 0;
 }
 
 h2, .h2 {
-  .font-size(48);
   .line-height(48, 50);
   font-weight: 300;
   margin: 0 auto 70px;
@@ -179,13 +177,70 @@ hr {
   border-bottom: 1px solid @color_grey_light;
 }
 
-@media @mobile {
+@media @laptopMd {
   h1, .h1 {
-    .font-size(50);
+    .font-size(48);
   }
 
   h2, .h2 {
+    .line-height(42, 46);
+    margin: 0 auto 50px;
+  }
+
+  h3, .h3 {
+    .line-height(28, 38);
+  }
+
+  h4, .h4 {
+    .line-height(22, 28);
+  }
+}
+
+@media @tablet {
+  h1, .h1 {
     .font-size(40);
   }
 
+  h2, .h2 {
+    .line-height(34, 38);
+    margin: 0 auto 40px;
+  }
+
+  h3, .h3 {
+    .line-height(26, 36);
+  }
+
+  h4, .h4 {
+    .line-height(20, 26);
+  }
+}
+
+@media @mobileLg {
+  h1, .h1 {
+    .font-size(34);
+  }
+
+  h2, .h2 {
+    .line-height(34, 38);
+    margin: 0 auto 30px;
+  }
+
+  h3, .h3 {
+    .line-height(24, 34);
+  }
+}
+
+@media @mobile {
+  h1, .h1 {
+    .font-size(28);
+  }
+
+  h2, .h2 {
+    .line-height(34, 38);
+    margin: 0 auto 25px;
+  }
+
+  h3, .h3 {
+    .line-height(22, 32);
+  }
 }

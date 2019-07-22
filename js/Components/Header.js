@@ -10,7 +10,7 @@ export class HeaderComponent extends BaseComponent {
   }
 
   _events() {
-    $(document).on('click', '.brgr-menu', (e) => {
+    $(document).on('click', '.brgr-menu, .brgr-close', (e) => {
       toggleMobileMenu();
     });
 
@@ -25,17 +25,15 @@ export class HeaderComponent extends BaseComponent {
     });
 
     function toggleMobileMenu() {
-      $('#header').find('.menu').slideToggle();
+      $('#header').find('.nav').fadeToggle();
       $('.brgr-menu').toggleClass('active');
-      $('.header-transp').toggleClass('collapsed');
       $('body').toggleClass('hidden');
     }
 
     $(window).on('resize', (e) => {
-      if (window.matchMedia('(min-width: 1121px)').matches) {
-        $('.menu').removeAttr('style');
+      if (window.matchMedia('(min-width: 1250px)').matches) {
+        $('.nav').removeAttr('style');
         $('.brgr-menu').removeClass('active');
-        $('.header-transp').removeClass('collapsed');
         $('body').removeClass('hidden');
       }
     });

@@ -53,7 +53,7 @@
 
     &:hover {
       background-color: darken(@color_red, 5%);
-      border: 1px solid  darken(@color_red, 5%);
+      border: 1px solid darken(@color_red, 5%);
     }
   }
 
@@ -89,18 +89,37 @@
 
   &.pallet-red {
     background-color: @color_red;
-
   }
 
   &.pallet-orange {
     background-color: #FAA740;
     color: @color_black;
-
   }
 
   &.pallet-long {
     margin-left: 0;
-    border-radius:0 4px 4px 0;
+    border-radius: 0 4px 4px 0;
   }
 
+  &.pallet-lg {
+    min-width: 128px;
+    min-height: 32px;
+    padding: 5px 15px;
+    .font-size(16);
+    font-weight: 700;
+    text-align: center;
+  }
+}
+
+@media @mobileLg {
+  .pallet {
+    &.pallet-lg {
+      min-width: 56px;
+      min-height: 18px;
+      padding: 3px 15px;
+      .font-size(10);
+      font-weight: 700;
+      text-align: center;
+    }
+  }
 }

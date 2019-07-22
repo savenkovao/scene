@@ -20,17 +20,13 @@
   }
 
   &.c-date-lg{
-
     min-width: 90px;
     height: 90px;
-
     .font-size(36);
-
 
     .month {
       .font-size(22);
     }
-
   }
 
   &.c-date-white{
@@ -47,3 +43,26 @@
   background-image: url("../img/date_arrow.svg");
 }
 
+
+@media @mobileLg {
+  .c-date {
+    padding: 0 10px;
+    min-width: 48px;
+    height: 48px;
+    .font-size(15);
+
+    .month {
+      .font-size(10);
+    }
+
+    &.c-date-lg{
+      min-width: 54px;
+      height: 54px;
+      .font-size(20);
+
+      .month {
+        .font-size(16);
+      }
+    }
+}
+}

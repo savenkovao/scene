@@ -34,7 +34,7 @@
     top: auto;
     bottom: 0;
     width: 100%;
-    height: 35%;
+    height: 40%;
     background: linear-gradient(180deg, rgba(59, 59, 105, 0) 2.46%, rgba(59, 59, 105, .85) 49.41%, rgba(59, 59, 105, .85) 100%);
   }
 }
@@ -46,8 +46,11 @@
 }
 
 .heading-slide-txt {
-  .btn {
+  padding-right: 30px;
+
+  .pallet {
     margin-bottom: 35px;
+    margin-left: 0;
   }
 
   h1 {
@@ -130,6 +133,59 @@
 
   }
 
+}
+
+@media @tabletLg {
+  .header-scroll-btn {
+    svg {
+      width: 55px;
+      height: 55px;
+    }
+  }
+}
+
+@media @mobileLg {
+  .heading-slide::after {
+    height: 100%;
+    background: linear-gradient(180deg, rgba(59, 59, 105, 0.85) 0.51%, rgba(59, 59, 105, 0.204) 48.78%, rgba(59, 59, 105, 0.6545) 58.31%, rgba(59, 59, 105, 0.85) 97.41%);
+  }
+
+  .heading-slide::before {
+    background: linear-gradient(360deg, rgba(59, 59, 105, 0) 0%, rgba(59, 59, 105, 0.95) 54.17%);
+    opacity: 0.95;
+  }
+
+  .aside-socials {
+    display: none;
+  }
+
+  .heading-slide-time {
+    .font-size(16);
+  }
+
+  .heading-slide-txt {
+    .pallet {
+      margin-bottom: 15px;
+    }
+  }
+
+  .header-scroll-btn {
+    svg {
+      width: 38px;
+      height: 38px;
+    }
+  }
+}
+
+@media @mobile {
+  .heading-slide-container {
+    display: block;
+  }
+
+  .heading-slide-txt {
+    padding-right: 0;
+    margin-bottom: 10px;
+  }
 }
 
 /* Heading */
@@ -309,12 +365,13 @@
   flex-wrap: wrap;
   padding: 0 12px;
   background: #F7F7F7;
+  margin: 10px 0;
 }
 
 .scenes-item {
   width: ~'calc(33.33% - 25px)';
-  min-width: 280px;
-  margin: 20px 12px;
+  min-width: 250px;
+  margin: 10px 12px;
   border-radius: 4px;
   overflow: hidden;
   box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.05), 0px 3px 3px rgba(0, 0, 0, 0.1);
@@ -324,6 +381,10 @@
 
     .panel {
       display: flex;
+    }
+
+    hr {
+      display: none;
     }
 
     .scene-event-txt,
@@ -431,6 +492,80 @@
   text-transform: uppercase;
 }
 
+
+@media @laptopLg {
+  .scene-user-name,
+  .scene-event-name {
+    .font-size(14);
+  }
+
+  .scene-user-img {
+    width: 50px;
+    min-width: 50px;
+    padding-right: 10px;
+  }
+}
+
+@media @laptopMd {
+  .scenes {
+    padding: 60px 0 30px;
+  }
+
+  .scenes-content {
+    margin-bottom: 60px;
+  }
+
+  .feed-item {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto 8px;
+  }
+}
+
+@media @tablet {
+  .scenes-item {
+    width: ~'calc(50% - 25px)';
+
+    &.scenes-item.scenes-item-full {
+      width: ~'calc(50% - 25px)';
+
+      .panel {
+        display: block;
+      }
+
+      hr {
+        display: block;
+      }
+
+      .scene-event-txt {
+        width: 100%;
+        padding-right: 0;
+        border-right: none;
+      }
+
+      .scene-user {
+        width: 100%;
+        padding-left: 0;
+      }
+    }
+  }
+}
+
+@media @mobileMd {
+  .scenes-list {
+    display: block;
+  }
+
+  .scenes-item {
+    width: 100%;
+    margin: 0 auto 20px;
+
+    &.scenes-item.scenes-item-full {
+      width: 100%;
+    }
+  }
+}
+
 /* scenes, feed */
 
 /* categories */
@@ -489,8 +624,55 @@
   z-index: 1;
 }
 
-.categories-btn {
+@media @laptopMd {
+  .categories {
+    padding: 30px 0;
+  }
 
+  .categories-title {
+    .font-size(20);
+  }
+}
+
+@media @tabletLg {
+  .categories-list {
+    margin: 0 -12px 40px;
+  }
+
+  .categories-item {
+    width: ~'calc(33.33% - 25px)';
+    height: 220px;
+  }
+
+  .categories-title {
+    .font-size(18);
+  }
+}
+
+@media @mobileLg {
+  .categories-list {
+    margin: 0 -12px 25px;
+  }
+
+  .categories-item {
+    width: ~'calc(50% - 25px)';
+  }
+
+  .categories-title {
+    .font-size(16);
+  }
+}
+
+
+@media @mobile {
+  .categories-item {
+    width: ~'calc(50% - 25px)';
+    height: 180px;
+  }
+
+  .categories-title {
+    .font-size(14);
+  }
 }
 
 /* categories */
@@ -502,10 +684,32 @@
 }
 
 .map-container {
-  height: 85vh;
+  height: ~'calc(100vh - 200px)';
   min-height: 500px;
   background-color: #ede9e9;
   margin-bottom: 60px;
+}
+
+@media @laptopMd {
+  .map {
+    padding: 30px 0;
+  }
+
+  .map-container {
+    margin-bottom: 45px;
+  }
+}
+
+@media @tabletLg {
+  .map-container {
+    margin-bottom: 35px;
+  }
+}
+
+@media @mobileMd {
+  .map-container {
+    margin-bottom: 30px;
+  }
 }
 
 /* map */
@@ -521,10 +725,8 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-
   background-image: url('../img/apps_bg.jpg');
   background-color: rgba(59, 65, 144, 0.75);
-
 }
 
 .apps-content {
@@ -585,6 +787,82 @@
   }
 }
 
+@media @laptopMd {
+  .apps {
+    padding: 30px 0;
+  }
+}
+
+@media @laptop {
+  .apps-content {
+    padding: 0 7% 0 2%;
+  }
+
+  .apps-logo {
+    width: 75px;
+  }
+}
+
+@media @tablet {
+  .apps-bg {
+    padding: 35px 0 0;
+  }
+
+  .apps-content {
+    display: block;
+    padding: 0 0 0 2%;
+  }
+
+  .apps-logo {
+    display: none;
+  }
+
+  .app-link-img {
+    height: 50px;
+  }
+
+  .apps-img {
+    display: inline-block;
+    margin-top: -80px;
+    float: right;
+  }
+}
+
+@media @mobileLg {
+  .apps-bg {
+    padding: 20px 0 0;
+  }
+
+  .apps-img {
+    margin-right: 0;
+    margin-top: 0;
+    float: none;
+  }
+}
+
+@media @mobileMd {
+  .apps {
+    .app-link {
+      display: block;
+      margin-bottom: 20px;
+      margin-right: 0;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .apps-img {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .apps-content .h4 {
+    margin-bottom: 20px;
+  }
+}
+
 /* apps */
 
 /* kinds */
@@ -635,12 +913,116 @@
   bottom: 0;
   right: 10%;
   width: 40%;
+  height: 100%;
   max-width: 600px;
   font-size: 0;
+  background-size: 90%;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-image: url("../img/kinds_phones.png");
 
   img {
     display: inline-block;
     width: 100%;
+  }
+}
+
+@media @laptop {
+  .kinds-bg {
+    padding: 55px 0 0;
+  }
+
+  .kinds-content {
+    h2 {
+      .font-size(30);
+    }
+  }
+
+  .kinds-img {
+    width: 36%;
+  }
+}
+
+@media @tablet {
+  .kinds-content {
+    h2 {
+      .font-size(28);
+    }
+  }
+
+  .kinds-img {
+    right: 0;
+  }
+}
+
+@media @mobileLg {
+  .kinds-content {
+    display: block;
+    padding: 0 2%;
+
+    h2 {
+      .font-size(26);
+    }
+  }
+
+  .kinds-txt {
+    padding-right: 0;
+    padding-bottom: 50px;
+  }
+
+  .kinds-bg {
+    padding: 30px 0 15px;
+  }
+
+  .kinds-img {
+    position: static;
+    height: 320px;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    background-image: url(../img/kinds_phones_mobile.png);
+  }
+}
+
+@media @mobileMd {
+  .kinds-content {
+    h2 {
+      .font-size(24);
+    }
+  }
+
+  .kinds-img {
+    position: static;
+    height: 320px;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    background-image: url(../img/kinds_phones_mobile.png);
+    background-size: contain;
+  }
+}
+
+
+@media @mobile {
+  .kinds-content {
+    h2 {
+      .font-size(20);
+    }
+  }
+
+  .kinds {
+    .app-link {
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+
+  .kinds-txt {
+    padding-bottom: 30px;
+  }
+
+  .kinds-img {
+    height: 270px;
   }
 }
 
@@ -653,6 +1035,13 @@
   h3 {
     max-width: 1250px;
     margin: 0 auto;
+  }
+}
+
+
+@media @laptopMd {
+  .about {
+    padding: 30px 0 60px;
   }
 }
 
@@ -681,6 +1070,7 @@
 
 .advantages-item {
   max-width: 300px;
+  margin: 0 10px;
 }
 
 
@@ -705,7 +1095,34 @@
       margin-bottom: 10px;
     }
   }
+}
 
+@media @laptopMd {
+  .advantages {
+    padding: 80px 0;
+  }
+
+  .advantages-cont {
+    padding: 0 5%;
+  }
+}
+
+@media @mobileLg {
+  .advantages {
+    padding: 40px 0 115px;
+  }
+
+  .advantages-cont {
+    padding: 0 5%;
+  }
+
+  .advantages-list {
+    display: block;
+  }
+
+  .advantages-item {
+    margin: 0 auto 25px;
+  }
 }
 
 /* advantages */
@@ -715,7 +1132,6 @@
 .happening {
   padding: 120px 0 60px;
 }
-
 
 .happening-list {
   display: flex;
@@ -727,7 +1143,7 @@
 .happening-item {
   display: inline-block;
   width: 16.6%;
-  min-width: ~'calc(16.6% - 20px)';
+  min-width: 230px;
   max-width: 285px;
   height: 360px;
   margin: 20px 10px;
@@ -748,6 +1164,13 @@
 .happening-item-txt {
   padding: 15px;
   background-color: rgba(59, 59, 105, 0.75);
+}
+
+
+@media @laptopMd {
+  .happening {
+    padding: 60px 0 30px;
+  }
 }
 
 /* happening */

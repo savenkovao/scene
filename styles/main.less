@@ -117,89 +117,28 @@ html, body {
 }
 
 @media @laptopLg {
-  .container {
-    padding: 0 20px;
+}
+
+@media @laptopMd {
+  .container-with-aside {
+    flex-direction: column-reverse;
+    align-items: center;
   }
 
   .aside {
-    z-index: -1;
-
-    &.aside-lg {
-      width: 30%;
-      min-width: 315px;
-    }
+    width: 100%;
+    max-width: 100%;
+    padding-right: 0;
   }
 }
 
-@media @laptop {
-  .container {
-    //min-height: 100vh;
-    height: auto;
-  }
-}
 
 @media @tablet {
-  .aside {
-    min-width: 235px;
-
-    &.aside-lg {
-      min-width: 235px;
-    }
-  }
 }
 
-@media @mobileLg {
-
+@media @mobile {
   .container {
+    padding: 0 15px;
     display: block;
-  }
-
-  .panel {
-    padding: 100px 20px 70px;
-  }
-
-  .aside {
-    height: 550px;
-    width: 100%;
-    max-width: none;
-
-    &.aside-lg {
-      width: 100%;
-    }
-
-    .aside-img {
-      width: 100% !important;
-      height: 100% !important;
-      background-size: 490px !important;
-      top: auto !important;
-      bottom: 0 !important;
-      right: 0 !important;
-      left: auto !important;
-    }
-  }
-
-  .currency-block {
-    top: 20px;
-    left: 20px;
-  }
-
-  .drop-animation {
-    top: auto !important;
-    bottom: 0;
-
-    canvas {
-      height: 1300px !important;
-      width: 1300px !important;
-    }
-  }
-
-}
-
-@media @mobileMd {
-  .drop-animation {
-    canvas {
-      height: 900px !important;
-      width: 900px !important;
-    }
   }
 }
