@@ -5,6 +5,7 @@ import {ScrollModule} from './Modules/ScrollModule';
 import {Tabs} from "./Components/Tabs";
 import {PageSlidersComponent} from "./Components/PageSliders";
 import Tooltip from "tooltip.js";
+import {LazyLoadModule} from "./Modules/LazyLoadModule";
 
 
 class App {
@@ -32,6 +33,8 @@ class App {
       placement: 'top',
       title: "Tooltip helper text"
     });
+
+    new LazyLoadModule();
   }
 }
 
