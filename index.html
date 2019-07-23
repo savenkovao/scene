@@ -13,7 +13,7 @@
   <script>
     window.CONFIG = {
       BASE_URL: '/',
-      GOOGLE_API_KEY: 'AIzaSyD6k7z9xNAXnrrW9n2FSKKGQKHtoTwIRe0',
+      GOOGLE_API_KEY: 'AIzaSyCchDkwEWPxFWGIRhoR_g8IH0IkiSDf1cI',
       GOOGLE_API_VERSION: '3.36'
     };
   </script>
@@ -35,15 +35,16 @@
         <div class="header-search">
           <form class="header-search-form">
             <label class="form-label">
-              <input class="form-control" type="text" placeholder="Search by keyword">
+              <input class="form-control form-control-icn" type="text" placeholder="Search by keyword">
             </label>
 
-            <label class="form-label">
-              <select class="form-control">
-                <option value="">Item</option>
-                <option value="">Item</option>
-                <option value="">Item</option>
-                <option value="">Item</option>
+            <label class="form-label form-label-select">
+              <select class="form-control form-control-icn pin">
+                <option value="" disabled selected>SCENE Cities</option>
+                <option value="1">City name</option>
+                <option value="2">City name</option>
+                <option value="3">City name</option>
+                <option value="4">City name</option>
               </select>
             </label>
             <button class="btn btn-red">Go</button>
@@ -185,6 +186,38 @@
           </div>
         </div>
         <!-- slide -->
+
+        <!-- slide -->
+        <div>
+          <div class="heading-slide" style="background-image: url('public/img/heading_slide.jpg')">
+            <div class="container">
+              <div class="heading-slider">
+                <div class="heading-slide-container">
+                  <div class="heading-slide-txt">
+                    <!--                <a href="#" class="btn btn-md btn-red" target="_blank">FREE</a> <br>-->
+                    <div class="pallet pallet-lg pallet-red">FREE</div>
+                    <br>
+
+                    <h1>Complimentary Masterclass from Chef</h1>
+                    <div class="heading-slide-time">
+                      <span class="text-green">10:00</span> am -
+                      <span class="text-green">17:00</span> pm <br>
+                      <small>and other timngs</small>
+                    </div>
+                  </div>
+
+                  <div class="c-date c-date-lg c-date-white">
+                    <div>
+                      <div>08</div>
+                      <div class="month">Jun</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- slide -->
       </div>
 
       <div>
@@ -192,20 +225,21 @@
         <div class="header-search-mobile">
           <form class="header-search-form">
             <label class="form-label">
-              <input class="form-control" type="text" placeholder="Search by keyword">
+              <input class="form-control form-control-icn" type="text" placeholder="Search by keyword">
             </label>
 
-            <label class="form-label">
-              <select class="form-control">
-                <option value="">Item</option>
-                <option value="">Item</option>
-                <option value="">Item</option>
-                <option value="">Item</option>
+            <label class="form-label form-label-select">
+              <select class="form-control form-control-icn pin">
+                <option value="" disabled selected>SCENE Cities</option>
+                <option value="1">City name</option>
+                <option value="2">City name</option>
+                <option value="3">City name</option>
+                <option value="4">City name</option>
               </select>
             </label>
             <button class="btn btn-red">Go</button>
           </form>
-          <p>
+          <p class="text-white">
             Social discovery platfrom and network for entertainment and city experiences.
           </p>
         </div>
@@ -257,7 +291,9 @@
       <div class="container">
         <div class="container-with-aside">
           <aside class="aside" id="livefeed">
-            <div class="panel-title panel-feed">LiVefeed</div>
+            <div class="panel-title panel-feed">
+              <span class="panel-icon">LiVefeed</span>
+            </div>
 
             <div class="feed-content" data-tabs>
               <div class="tabs" data-tab-toggles>
@@ -550,7 +586,11 @@
           </aside>
 
           <div class="container-content scenes-content" id="scenes">
-            <div class="panel-title panel-scenes">Scenes</div>
+            <div class="panel-title panel-scenes">
+              <span class="panel-icon scenes-icn">Scenes</span>
+
+              <span class="info-icn" data-tooltip></span>
+            </div>
 
             <div class="scenes-list">
               <!-- scene item -->
@@ -1046,7 +1086,7 @@
       <div class="advantages-cont">
         <h2 class="text-center">Time Well Spent</h2>
 
-        <div class="advantages-list">
+        <div class="advantages-list" id="advantages-slider">
           <div class="advantages-item">
             <div class="advantage-item-img">
               <img src="public/img/advantage_1.svg" alt="">
@@ -1090,16 +1130,151 @@
 
         <div class="happening-list" id="happening-list">
           <!-- happening item-->
-          <a href="#" class="happening-item" style="background-image: url('public/img/happening_img.jpg')">
-            <div class="happening-item-txt">
-              <div class="notation text-purple m-b-10">Featured</div>
-              <h6 class="text-white">Pink Yasalam 2017 A er-Race Concerts</h6>
+          <a href="#" class="happening-item">
+            <div class="happening-item-cont" style="background-image: url('public/img/happening_img.jpg')">
+              <div class="happening-item-txt">
+                <div class="notation text-purple m-b-10">Featured</div>
+                <h6 class="text-white">Pink Yasalam 2017 A er-Race Concerts</h6>
 
-              <div class="flex">
-                <div class="c-date c-date-white">
-                  <div>
-                    <div>12</div>
-                    <div class="month">Jаn</div>
+                <div class="flex">
+                  <div class="c-date c-date-white">
+                    <div>
+                      <div>12</div>
+                      <div class="month">Jаn</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+          <!-- happening item-->
+          <!-- happening item-->
+          <a href="#" class="happening-item">
+            <div class="happening-item-cont" style="background-image: url('public/img/happening_img.jpg')">
+              <div class="happening-item-txt">
+                <div class="notation text-purple m-b-10">Featured</div>
+                <h6 class="text-white">Pink Yasalam 2017 A er-Race Concerts</h6>
+
+                <div class="flex">
+                  <div class="c-date c-date-white">
+                    <div>
+                      <div>12</div>
+                      <div class="month">Jаn</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+          <!-- happening item-->
+          <!-- happening item-->
+          <a href="#" class="happening-item">
+            <div class="happening-item-cont" style="background-image: url('public/img/happening_img.jpg')">
+              <div class="happening-item-txt">
+                <div class="notation text-purple m-b-10">Featured</div>
+                <h6 class="text-white">Pink Yasalam 2017 A er-Race Concerts</h6>
+
+                <div class="flex">
+                  <div class="c-date c-date-white">
+                    <div>
+                      <div>12</div>
+                      <div class="month">Jаn</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+          <!-- happening item-->
+          <!-- happening item-->
+          <a href="#" class="happening-item">
+            <div class="happening-item-cont" style="background-image: url('public/img/happening_img.jpg')">
+              <div class="happening-item-txt">
+                <div class="notation text-purple m-b-10">Featured</div>
+                <h6 class="text-white">Pink Yasalam 2017 A er-Race Concerts</h6>
+
+                <div class="flex">
+                  <div class="c-date c-date-white">
+                    <div>
+                      <div>12</div>
+                      <div class="month">Jаn</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+          <!-- happening item-->
+          <!-- happening item-->
+          <a href="#" class="happening-item">
+            <div class="happening-item-cont" style="background-image: url('public/img/happening_img.jpg')">
+              <div class="happening-item-txt">
+                <div class="notation text-purple m-b-10">Featured</div>
+                <h6 class="text-white">Pink Yasalam 2017 A er-Race Concerts</h6>
+
+                <div class="flex">
+                  <div class="c-date c-date-white">
+                    <div>
+                      <div>12</div>
+                      <div class="month">Jаn</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+          <!-- happening item-->
+          <!-- happening item-->
+          <a href="#" class="happening-item">
+            <div class="happening-item-cont" style="background-image: url('public/img/happening_img.jpg')">
+              <div class="happening-item-txt">
+                <div class="notation text-purple m-b-10">Featured</div>
+                <h6 class="text-white">Pink Yasalam 2017 A er-Race Concerts</h6>
+
+                <div class="flex">
+                  <div class="c-date c-date-white">
+                    <div>
+                      <div>12</div>
+                      <div class="month">Jаn</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+          <!-- happening item-->
+          <!-- happening item-->
+          <a href="#" class="happening-item">
+            <div class="happening-item-cont" style="background-image: url('public/img/happening_img.jpg')">
+              <div class="happening-item-txt">
+                <div class="notation text-purple m-b-10">Featured</div>
+                <h6 class="text-white">Pink Yasalam 2017 A er-Race Concerts</h6>
+
+                <div class="flex">
+                  <div class="c-date c-date-white">
+                    <div>
+                      <div>12</div>
+                      <div class="month">Jаn</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+          <!-- happening item-->
+          <!-- happening item-->
+          <a href="#" class="happening-item">
+            <div class="happening-item-cont" style="background-image: url('public/img/happening_img.jpg')">
+              <div class="happening-item-txt">
+                <div class="notation text-purple m-b-10">Featured</div>
+                <h6 class="text-white">Pink Yasalam 2017 A er-Race Concerts</h6>
+
+                <div class="flex">
+                  <div class="c-date c-date-white">
+                    <div>
+                      <div>12</div>
+                      <div class="month">Jаn</div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1107,131 +1282,6 @@
           </a>
           <!-- happening item-->
 
-          <!-- happening item-->
-          <a href="#" class="happening-item" style="background-image: url('public/img/happening_img.jpg')">
-            <div class="happening-item-txt">
-              <div class="notation text-purple m-b-10">Featured</div>
-              <h6 class="text-white">Pink Yasalam 2017 A er-Race Concerts</h6>
-
-              <div class="flex">
-                <div class="c-date c-date-white">
-                  <div>
-                    <div>12</div>
-                    <div class="month">Jаn</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
-          <!-- happening item-->
-
-          <!-- happening item-->
-          <a href="#" class="happening-item" style="background-image: url('public/img/happening_img.jpg')">
-            <div class="happening-item-txt">
-              <div class="notation text-purple m-b-10">Featured</div>
-              <h6 class="text-white">Pink Yasalam 2017 A er-Race Concerts</h6>
-
-              <div class="flex">
-                <div class="c-date c-date-white">
-                  <div>
-                    <div>12</div>
-                    <div class="month">Jаn</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
-          <!-- happening item-->
-
-          <!-- happening item-->
-          <a href="#" class="happening-item" style="background-image: url('public/img/happening_img.jpg')">
-            <div class="happening-item-txt">
-              <div class="notation text-purple m-b-10">Featured</div>
-              <h6 class="text-white">Pink Yasalam 2017 A er-Race Concerts</h6>
-
-              <div class="flex">
-                <div class="c-date c-date-white">
-                  <div>
-                    <div>12</div>
-                    <div class="month">Jаn</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
-          <!-- happening item-->
-
-          <!-- happening item-->
-          <a href="#" class="happening-item" style="background-image: url('public/img/happening_img.jpg')">
-            <div class="happening-item-txt">
-              <div class="notation text-purple m-b-10">Featured</div>
-              <h6 class="text-white">Pink Yasalam 2017 A er-Race Concerts</h6>
-
-              <div class="flex">
-                <div class="c-date c-date-white">
-                  <div>
-                    <div>12</div>
-                    <div class="month">Jаn</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
-          <!-- happening item-->
-
-          <!-- happening item-->
-          <a href="#" class="happening-item" style="background-image: url('public/img/happening_img.jpg')">
-            <div class="happening-item-txt">
-              <div class="notation text-purple m-b-10">Featured</div>
-              <h6 class="text-white">Pink Yasalam 2017 A er-Race Concerts</h6>
-
-              <div class="flex">
-                <div class="c-date c-date-white">
-                  <div>
-                    <div>12</div>
-                    <div class="month">Jаn</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
-          <!-- happening item-->
-
-          <!-- happening item-->
-          <a href="#" class="happening-item" style="background-image: url('public/img/happening_img.jpg')">
-            <div class="happening-item-txt">
-              <div class="notation text-purple m-b-10">Featured</div>
-              <h6 class="text-white">Pink Yasalam 2017 A er-Race Concerts</h6>
-
-              <div class="flex">
-                <div class="c-date c-date-white">
-                  <div>
-                    <div>12</div>
-                    <div class="month">Jаn</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
-          <!-- happening item-->
-
-          <!-- happening item-->
-          <a href="#" class="happening-item" style="background-image: url('public/img/happening_img.jpg')">
-            <div class="happening-item-txt">
-              <div class="notation text-purple m-b-10">Featured</div>
-              <h6 class="text-white">Pink Yasalam 2017 A er-Race Concerts</h6>
-
-              <div class="flex">
-                <div class="c-date c-date-white">
-                  <div>
-                    <div>12</div>
-                    <div class="month">Jаn</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
-          <!-- happening item-->
         </div>
       </div>
     </section>

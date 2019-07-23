@@ -1,0 +1,164 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  -webkit-tap-highlight-color: transparent;
+  -moz-tap-highlight-color: transparent;
+  -ms-tap-highlight-color: transparent;
+
+  -webkit-font-smoothing: antialiased;
+
+  // fix for Slick slider in Firefox
+  //min-height: 0;
+  //min-width: 0;
+  // fix for Slick slider in Firefox
+
+  &:active, &:focus {
+    outline: none;
+  }
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  color: #44566C;
+
+  position: relative;
+  margin: 0;
+  padding: 0;
+
+  &.slider-mode {
+    overflow: hidden;
+  }
+
+  &.hidden {
+    overflow: hidden;
+    height: 100vh;
+  }
+}
+
+
+.wrapper {
+  min-height: 90vh;
+  position: relative;
+  overflow: hidden;
+
+  &.wrapper-blured {
+    filter: blur(9px);
+
+    // fix for apple
+    // disable content scroll when popup opened
+    // input caret change position issue in fixed position popup
+    height: 100%;
+    overflow: hidden;
+  }
+}
+
+.container {
+  //max-width: 1768px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 75px;
+  transition: @transition;
+}
+
+.panel-title {
+  position: relative;
+  width: 100%;
+  padding: 25px;
+  text-align: center;
+  background-color: @color_black;
+  font-weight: 500;
+  .font-size(24);
+  text-transform: uppercase;
+  color: @color_white;
+  z-index: 1;
+}
+
+.panel {
+  position: relative;
+  width: 100%;
+  padding: 15px;
+  background-color: @color_white;
+  z-index: 1;
+}
+
+.panel-icon {
+  position: relative;
+  display: inline-block;
+  padding-left: 52px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    height: 36px;
+    width: 36px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('../img/panel_livefeed.svg');
+
+  }
+
+  &.scenes-icn {
+    &::before {
+      background-image: url('../img/panel_scenes.svg');
+    }
+  }
+}
+
+.container-with-aside {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.container-content {
+  width: 100%;
+}
+
+.aside {
+  position: relative;
+  width: 30%;
+  min-width: 300px;
+  max-width: 450px;
+  padding: 0 25px 0 0;
+
+  &.aside-lg {
+    width: 25%;
+    min-width: 350px;
+  }
+}
+
+@media @screenLg {
+  .container {
+    padding: 0 35px;
+  }
+}
+
+@media @laptopMd {
+  .container-with-aside {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .aside {
+    width: 100%;
+    max-width: 100%;
+    padding-right: 0;
+  }
+}
+
+@media @mobile {
+  .container {
+    padding: 0 15px;
+    display: block;
+  }
+}

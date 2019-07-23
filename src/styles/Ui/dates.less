@@ -1,0 +1,68 @@
+.c-date {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  //flex-direction: column;
+  min-width: 46px;
+  padding: 0 15px;
+  height: 46px;
+  border: 1px solid @color_black;
+  color: @color_black;
+  border-radius: 4px;
+  font-weight: 500;
+  .font-size(15);
+  text-align: center;
+  line-height: 1.1;
+  text-transform: uppercase;
+
+  .month {
+    .font-size(10);
+  }
+
+  &.c-date-lg{
+    min-width: 90px;
+    height: 90px;
+    .font-size(36);
+
+    .month {
+      .font-size(22);
+    }
+  }
+
+  &.c-date-white{
+    color: @color_white;
+    border: 1px solid @color_white;
+  }
+}
+
+.c-date-arrow {
+  padding:  8px 12px;
+  background-size: 7px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../img/date_arrow.svg");
+}
+
+
+@media @mobileLg {
+  .c-date {
+    padding: 0 10px;
+    min-width: 48px;
+    height: 48px;
+    .font-size(15);
+
+    .month {
+      .font-size(10);
+    }
+
+    &.c-date-lg{
+      min-width: 54px;
+      height: 54px;
+      .font-size(20);
+
+      .month {
+        .font-size(16);
+      }
+    }
+}
+}

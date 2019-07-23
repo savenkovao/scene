@@ -1,6 +1,5 @@
 var babelify   = require('babelify');
 var browserify = require('browserify');
-var minifyjs   = require('gulp-js-minify');
 var source     = require('vinyl-source-stream');
 var gulp       = require('gulp');
 
@@ -13,7 +12,6 @@ exports.es6toes5 = function (src, dest) {
         })
         .bundle()
         .pipe(source(dest))
-        // .pipe(minifyjs())
         .pipe(gulp.dest(PUBLIC_DIR+'/js'));
 };
 
