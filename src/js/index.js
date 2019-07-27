@@ -6,6 +6,7 @@ import {Tabs} from "./Components/Tabs";
 import {PageSlidersComponent} from "./Components/PageSliders";
 import Tooltip from "tooltip.js";
 import {LazyLoadModule} from "./Modules/LazyLoadModule";
+import {Popup} from "./Components/Popup";
 
 
 class App {
@@ -24,6 +25,7 @@ class App {
     new HeaderComponent();
     new Tabs();
     new PageSlidersComponent();
+    this.popup = new Popup($('#auth-modal'));
 
     new Map({
       selector: '#map'

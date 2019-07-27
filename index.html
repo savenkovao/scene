@@ -64,8 +64,10 @@
           <li><a href="#organizer">Organizer</a></li>
           <li class="menu-contact"><a href="#contact-us">Contact Us</a></li>
           <li class="menu-btns">
-            <a href="#" class="btn btn-bordered" target="_blank">Log In</a>
-            <a href="#" class="btn" target="_blank">Sign Up</a>
+            <a href="#" href="javascript:void(0)" brgr-close data-remodal-target="auth-modal" class="btn btn-bordered"
+               target="_blank">Log In</a>
+            <a href="#" href="javascript:void(0)" brgr-close data-remodal-target="auth-modal" class="btn" target="_blank">Sign
+              Up</a>
           </li>
           <li class="menu-app-links">
             <div class="app-links">
@@ -1476,6 +1478,28 @@
   </footer>
 </div>
 
+<!-- Modal -->
+<div class="remodal auth-modal" data-remodal-id="auth-modal" id="auth-modal">
+  <button data-remodal-action="close" class="remodal-close"></button>
+  <h3 class="text-center">
+    For the full experience Entertainment and Social Experience please
+    download SCENE’s mobile app!
+  </h3>
+  <div class="app-links">
+    <a href="#" class="app-link">
+      <img data-src="public/img/app_ios_dark.svg" class="app-link-img" alt="App Store Link">
+    </a>
+    <a href="#" class="app-link">
+      <img data-src="public/img/app_android_dark.svg" class="app-link-img" alt="Google Play Link">
+    </a>
+  </div>
+
+  <div class="auth-modal-img">
+    <img class="auth-modal-img-desktop" data-src="public/img/auth_popup_desktop.png" alt="Apps">
+    <img class="auth-modal-img-mobile" data-src="public/img/auth_popup_mobile.png" alt="Apps">
+  </div>
+</div>
+<!-- Modal -->
 </body>
 
 <script src="public/js/index.js"></script>

@@ -6,12 +6,14 @@ export class HeaderComponent extends BaseComponent {
 
   constructor() {
     super();
+    this.currentScroll = 0;
+    this.$body = $('body');
     this.toggleHeaderType();
   }
 
   _events() {
     this.$header = $('#header');
-    $(document).on('click', '.brgr-menu, .brgr-close', (e) => {
+    $(document).on('click', '.brgr-menu, .brgr-close, [data-brgr-close ]', (e) => {
       this.toggleMobileMenu();
     });
 
@@ -30,7 +32,7 @@ export class HeaderComponent extends BaseComponent {
       if (window.matchMedia('(min-width: 1250px)').matches) {
         $('.nav').removeAttr('style');
         $('.brgr-menu').removeClass('active');
-        $('body').removeClass('hidden');
+        this.$body.removeClass('hidden');
       }
     });
 
@@ -40,9 +42,20 @@ export class HeaderComponent extends BaseComponent {
   }
 
   toggleMobileMenu() {
+    if (!this.$body.hasClass('hidden')) {
+      this.currentScroll = window.pageYOffset;
+    }
+
+    this.$body.toggleClass('hidden');
+
+    if (!this.$body.hasClass('hidden')) {
+      $('html, body').animate({
+        scrollTop: this.currentScroll
+      }, 1);
+    }
+
     this.$header.find('.nav').fadeToggle();
     $('.brgr-menu').toggleClass('active');
-    $('body').toggleClass('hidden');
   }
 
   toggleHeaderType() {
