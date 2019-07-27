@@ -27,11 +27,20 @@
     .month {
       .font-size(22);
     }
+
+    .c-date-arrow {
+      padding:  8px 12px;
+      background-size: 12px;
+    }
   }
 
   &.c-date-white{
     color: @color_white;
     border: 1px solid @color_white;
+
+    .c-date-arrow {
+      background-image: url("../img/date_arrow_white.svg");
+    }
   }
 }
 
@@ -47,7 +56,7 @@
 @media @mobileLg {
   .c-date {
     padding: 0 10px;
-    min-width: 48px;
+    min-width: auto;
     height: 48px;
     .font-size(15);
 
@@ -56,7 +65,7 @@
     }
 
     &.c-date-lg{
-      min-width: 54px;
+      min-width: auto;
       height: 54px;
       .font-size(20);
 

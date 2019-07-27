@@ -10,7 +10,7 @@
   display: flex !important;
   align-items: flex-end;
   padding-top: 180px;
-  padding-bottom: 15vh;
+  padding-bottom: 18vh;
   background-color: rgba(59, 65, 144, .75);
   color: @color_white;
   background-position: center;
@@ -116,6 +116,7 @@
     height: 40px;
     background-color: @color_black;
     border-bottom: 1px solid @color_white;
+    text-decoration: none;
 
     svg {
       display: inline-block;
@@ -130,7 +131,7 @@
     &:hover {
       svg {
         path {
-          fill: @color_red;
+          fill: @color_green;
         }
       }
     }
@@ -283,7 +284,7 @@
   }
 
   .feed-user-img {
-    padding-right: 8px;
+    margin-right: 8px;
   }
 
   .feed-user-name {
@@ -350,24 +351,36 @@
 }
 
 .feed-user-img {
-  width: 65px;
-  min-width: 65px;
-  padding-right: 15px;
+  width: 50px;
+  min-width: 50px;
+  margin-right: 15px;
 
-  img {
+  a, img {
     display: inline-block;
-    width: 100%;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
+    background-color: @color_grey_light;
   }
 }
 
 .feed-user-name {
   display: block;
   margin-bottom: 4px;
-  font-weight: bold;
+  font-weight: 500;
   .line-height(14, 15);
   text-decoration: none;
   color: @color_blue;
+
+  a {
+    font-weight: 700;
+    color: @color_blue;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
 .feed-notation {
@@ -420,18 +433,39 @@
       padding-left: 25px;
     }
   }
+
+  &.scenes-item-br-red {
+    border: 2px solid @color_red;
+  }
 }
 
 .scenes-item-img {
-  height: 250px;
+  position: relative;
+  //height: 250px;
+  min-height: 155px;
+  max-height: 250px;
   background-color: #E6E6E6;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  font-size: 0;
+  overflow: hidden;
+
+  img {
+    display: inline-block;
+    width: 100%;
+  }
+
+  .img-mobile {
+    display: none;
+  }
 }
 
 
 .scenes-pallets {
+  position: absolute;
+  top: 0;
+  bottom: 0;
   padding-top: 20px;
 }
 
@@ -478,13 +512,24 @@
 
 
 .scene-user-img {
-  width: 75px;
-  min-width: 75px;
-  padding-right: 15px;
+  width: 60px;
+  min-width: 60px;
+  margin-right: 15px;
+  font-size: 9px;
+
+  a {
+    display: inline-block;
+    width: 100%;
+    height: 60px;
+    border-radius: 50%;
+    background-color: @color_grey_light;
+
+  }
 
   img {
     display: inline-block;
     width: 100%;
+    height: 60px;
     border-radius: 50%;
   }
 }
@@ -519,10 +564,20 @@
   }
 
   .scene-user-img {
-    width: 50px;
-    min-width: 50px;
-    padding-right: 10px;
+    width: 40px;
+    min-width: 40px;
+    margin-right: 10px;
+
+    a {
+      height: 40px;
+    }
+
+    img {
+      height: 40px;
+    }
   }
+
+
 }
 
 @media @laptopMd {
@@ -567,6 +622,17 @@
         padding-left: 0;
       }
     }
+  }
+
+  .scenes-item-img {
+
+  .img-mobile {
+    display: inline-block;
+  }
+
+  .img-desktop {
+    display: none;
+  }
   }
 }
 
@@ -735,7 +801,7 @@
 
 /* apps */
 .apps {
-  padding: 60px 0;
+  padding: 60px 0 30px;
   color: @color_white;
 }
 
@@ -1046,7 +1112,7 @@
 
 /* about */
 .about {
-  padding: 60px 0;
+  padding: 30px 0 60px;
 
   h3 {
     max-width: 1250px;

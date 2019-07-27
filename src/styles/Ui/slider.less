@@ -95,6 +95,10 @@
       }
     }
   }
+
+  .slick-dots {
+    bottom: ~'calc(18vh - 20px)';
+  }
 }
 
 .advantages-list.slick-slider {
@@ -138,6 +142,15 @@
 
 }
 
+@media @tabletLg {
+  .heading-slider {
+    .slick-dots {
+      bottom: ~'calc(18vh - 35px)';
+    }
+  }
+}
+
+
 @media @tablet {
   .slick-arrow {
     width: 70px;
@@ -170,6 +183,11 @@
     }
   }
 
+  .heading-slider {
+    .slick-dots {
+      bottom: 70px;
+    }
+  }
 }
 
 @media @mobile {
@@ -200,6 +218,11 @@
         justify-content: flex-end;
         right: 20px;
       }
+    }
+
+
+    .slick-dots {
+      bottom: 70px;
     }
   }
 }

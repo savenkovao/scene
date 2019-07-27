@@ -12,10 +12,13 @@
   border-radius: 4px;
   border: none;
   color: @color_white;
-  .font-size(14);
+  font-weight: 300;
+  .font-size(16);
 
   &::placeholder {
     color: @color_white;
+    .font-size(14);
+    font-weight: 400;
   }
 
   &.form-control-lg {
@@ -37,11 +40,16 @@
   }
 
   &.form-control-icn {
-    padding-left: 40px;
+    text-indent: 40px;
+    padding-left: 0;
     background-size: 17px;
     background-repeat: no-repeat;
     background-position: 12px center;
     background-image: url('../img/search_icon.svg');
+
+    &.search {
+      background-position: 12px 55%;
+    }
 
     &.pin {
       background-size: 24px;

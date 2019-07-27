@@ -12,22 +12,14 @@ export class PageSlidersComponent extends BaseComponent {
     this.advantagesSliderSelector = '#advantages-slider';
 
     this.headingSliderOpt = {
-      dots: false,
+      dots: true,
       accessibility: true,
       slidesToShow: 1,
       slidesToScroll: 1,
       infinite: true,
       arrows: true,
       centerMode: false,
-      focusOnSelect: true,
-      responsive: [
-        {
-          breakpoint: 768,
-          settings: {
-            dots: true
-          }
-        }
-      ]
+      focusOnSelect: true
     };
     this.happeningSliderOpt = {
       dots: false,
