@@ -12,7 +12,7 @@
   border-radius: 4px;
   border: none;
   color: @color_white;
-  font-weight: 300;
+  font-weight: 400;
   .font-size(16);
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -62,16 +62,16 @@
 }
 
 .form-label-select {
-    position: relative;
+  position: relative;
 
   &::before {
     content: '';
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    left: ~'calc(100% - 25px)';
-    width: 20px;
-    height: 20px;
+    left: ~'calc(100% - 27px)';
+    width: 25px;
+    height: 25px;
     background-color: @color_purple;
     background-repeat: no-repeat;
     background-size: 14px;
@@ -101,4 +101,106 @@
     }
   }
 
+}
+
+/* chosen overrides */
+
+.chosen-container {
+  width: 100% !important;
+}
+
+.chosen-container-active.chosen-with-drop,
+.chosen-container-single {
+  .chosen-single {
+    height: 38px;
+    padding: 5px 12px;
+    border-radius: 4px;
+    border: none;
+    color: @color_white;
+    font-weight: 400;
+    font-size: 1rem;
+    background: none;
+    background-color: @color_purple;
+    background-repeat: no-repeat;
+    background-position: 12px;
+    box-shadow: none;
+
+    span {
+      line-height: 26px;
+    }
+  }
+}
+
+.chosen-container-active.chosen-with-drop .chosen-single {
+  padding: 5px 12px 5px 0;
+  border-radius: 4px 4px 0 0;
+
+}
+
+.chosen-container .chosen-drop {
+  background-color: @color_purple;
+}
+
+.chosen-container .chosen-results {
+  color: @color_white;
+}
+
+.chosen-container .chosen-results li {
+  padding: 8px 6px;
+  .font-size(14);
+}
+
+.chosen-container .chosen-results li.highlighted {
+  background-image: none;
+  background-color: darken(@color_purple, 5%);
+}
+
+.chosen-container .chosen-results {
+  margin: 4px 0;
+  padding: 0;
+}
+
+.chosen-container-single .chosen-single div b {
+  width: 18px;
+  height: 100%;
+  background-color: @color_purple;
+  background-repeat: no-repeat;
+  background-size: 14px;
+  background-position: left center;
+  background-image: url('../img/select_arrow.svg');
+
+}
+
+.chosen-container-single .chosen-single div {
+  width: 25px;
+}
+
+.chosen-container-active.chosen-with-drop .chosen-single div b {
+  background-position: left;
+}
+
+/* chosen overrides */
+
+.chosen-label-icn {
+  .chosen-single {
+    text-indent: 40px;
+    padding-left: 0;
+    background-size: 17px;
+    background-repeat: no-repeat;
+    background-position: 12px center;
+    background-image: url('../img/search_icon.svg');
+  }
+
+  &.search {
+    .chosen-single {
+      background-position: 12px 55%;
+    }
+  }
+
+  &.pin {
+    .chosen-single {
+      background-size: 24px;
+      background-image: url('../img/pin_icon.svg');
+    }
+  }
 }

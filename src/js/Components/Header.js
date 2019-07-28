@@ -23,13 +23,13 @@ export class HeaderComponent extends BaseComponent {
 
     $(document).on('click', '.menu a', (e) => {
       if (window.matchMedia('(max-width: 1024px)').matches) {
-        this.toggleMobileMenu();
+        this.toggleMobileMenu(e);
       }
     });
 
 
     $(window).on('resize', (e) => {
-      if (window.matchMedia('(min-width: 1250px)').matches) {
+      if (window.matchMedia('(min-width: 480px)').matches) {
         $('.nav').removeAttr('style');
         $('.brgr-menu').removeClass('active');
         this.$body.removeClass('hidden');
@@ -41,17 +41,26 @@ export class HeaderComponent extends BaseComponent {
     });
   }
 
-  toggleMobileMenu() {
-    if (!this.$body.hasClass('hidden')) {
-      this.currentScroll = window.pageYOffset;
+  toggleMobileMenu(e) {
+    let isAnchor = false;
+    let isMobile = window.matchMedia('(max-width: 480px)').matches;
+
+    if (e && e.currentTarget) {
+      isAnchor = $(e.currentTarget)[0].hasAttribute('data-menu-ahchor')
     }
 
-    this.$body.toggleClass('hidden');
+    if (isMobile) {
+      if (!this.$body.hasClass('hidden')) {
+        this.currentScroll = window.pageYOffset;
+      }
 
-    if (!this.$body.hasClass('hidden')) {
-      $('html, body').animate({
-        scrollTop: this.currentScroll
-      }, 1);
+      this.$body.toggleClass('hidden');
+
+      if (!this.$body.hasClass('hidden') && !isAnchor) {
+        $('html, body').animate({
+          scrollTop: this.currentScroll
+        }, 1);
+      }
     }
 
     this.$header.find('.nav').fadeToggle();
