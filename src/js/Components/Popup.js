@@ -16,6 +16,7 @@ export class Popup {
 
   _initPopup() {
     disableBodyScroll($('body')[0]);
+    disableBodyScroll($(this.selector)[0]);
     console.log('Modal inited');
     $(document).on('opened', this.selector, function () {
       disableBodyScroll($('body')[0]);
