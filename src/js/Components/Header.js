@@ -16,9 +16,9 @@ export class HeaderComponent extends BaseComponent {
     $(document).on('click', '.brgr-menu, .brgr-close, [data-brgr-close]', (e) => {
       this.toggleMobileMenu();
     });
-    // $(document).on('closed', '.remodal', (e) => {
-    //   this.toggleMobileMenu()
-    // });
+    $(document).on('closing', '.remodal', (e) => {
+      this.toggleMobileMenu()
+    });
     // $(document).on('click', '.header-login.mobile-show', (e) => {
     //   this.toggleMobileMenu();
     // });
