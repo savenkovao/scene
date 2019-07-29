@@ -17,11 +17,11 @@ export class Popup {
   _initPopup() {
     console.log('Modal inited');
     $(document).on('opened', this.selector, function () {
-      disableBodyScroll(this.$target[0]);
+      disableBodyScroll($('body')[0]);
     });
 
     $(document).on('closed', '.remodal', function (e) {
-      enableBodyScroll(this.$target[0]);
+      enableBodyScroll($('body')[0]);
     });
 
     return $(this.selector).remodal(this.options);
