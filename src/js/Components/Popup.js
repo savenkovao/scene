@@ -22,7 +22,7 @@ export class Popup {
 
     $(document).on('closed', '.remodal', function (e) {
       console.log('Modal is closed' + (e.reason ? ', reason: ' + e.reason : ''));
-      stopBodyScrolling(true);
+      stopBodyScrolling(false);
     });
 
     let freezeVp = function (e) {
