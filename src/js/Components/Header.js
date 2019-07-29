@@ -13,20 +13,21 @@ export class HeaderComponent extends BaseComponent {
 
   _events() {
     this.$header = $('#header');
-    $(document).on('click', '.brgr-menu, .brgr-close, [data-brgr-close ]', (e) => {
+    $(document).on('click', '.brgr-menu, .brgr-close, [data-brgr-close]', (e) => {
       this.toggleMobileMenu();
     });
-
-    $(document).on('click', '.header-login.mobile-show', (e) => {
-      this.toggleMobileMenu();
-    });
+    // $(document).on('closed', '.remodal', (e) => {
+    //   this.toggleMobileMenu()
+    // });
+    // $(document).on('click', '.header-login.mobile-show', (e) => {
+    //   this.toggleMobileMenu();
+    // });
 
     $(document).on('click', '.menu a', (e) => {
       if (window.matchMedia('(max-width: 1024px)').matches) {
         this.toggleMobileMenu(e);
       }
     });
-
 
     $(window).on('resize', (e) => {
       if (window.matchMedia('(min-width: 480px)').matches) {
@@ -59,7 +60,7 @@ export class HeaderComponent extends BaseComponent {
       if (!this.$body.hasClass('hidden') && !isAnchor) {
         $('html, body').animate({
           scrollTop: this.currentScroll
-        }, 1);
+        }, 0);
       }
     }
 

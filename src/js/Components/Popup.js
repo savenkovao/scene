@@ -14,14 +14,13 @@ export class Popup {
   }
 
   _initPopup() {
-    console.log('Modal inited');
     $(document).on('opened', this.selector, function () {
       document.ontouchmove = function (e) {
         e.preventDefault();
       }
     });
 
-    $(document).on('closed', '.remodal', function (e) {
+    $(document).on('closed', this.selector, function (e) {
       document.ontouchmove = function (e) {
         return true;
       }
@@ -29,5 +28,4 @@ export class Popup {
 
     return $(this.selector).remodal(this.options);
   }
-
 }
