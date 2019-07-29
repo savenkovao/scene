@@ -14,6 +14,7 @@ export class Popup {
   }
 
   _initPopup() {
+    console.log('Modal inited');
     $(document).on('opened', this.selector, function () {
       console.log('Modal is opened');
       stopBodyScrolling(true);
