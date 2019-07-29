@@ -1,5 +1,4 @@
 import $ from 'jquery';
-import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
 require('../../../node_modules/remodal/src/remodal');
 
 export class Popup {
@@ -15,15 +14,17 @@ export class Popup {
   }
 
   _initPopup() {
-    disableBodyScroll($('body')[0]);
-    disableBodyScroll($(this.selector)[0]);
     console.log('Modal inited');
     $(document).on('opened', this.selector, function () {
-      disableBodyScroll($('body')[0]);
+      document.ontouchmove = function (e) {
+        e.preventDefault();
+      }
     });
 
     $(document).on('closed', '.remodal', function (e) {
-      enableBodyScroll($('body')[0]);
+      document.ontouchmove = function (e) {
+        return true;
+      }
     });
 
     return $(this.selector).remodal(this.options);
