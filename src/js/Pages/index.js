@@ -1,14 +1,14 @@
 import $ from 'jquery';
 window.jQuery = $;
-import {HeaderComponent} from './Components/Header';
-import {Map} from './Components/Map';
-import {ScrollModule} from './Modules/ScrollModule';
-import {Tabs} from "./Components/Tabs";
-import {PageSlidersComponent} from "./Components/PageSliders";
+import {HeaderComponent} from '../Components/Header';
+import {Map} from '../Components/Map';
+import {ScrollModule} from '../Modules/ScrollModule';
+import {Tabs} from "../Components/Tabs";
+import {PageSlidersComponent} from "../Components/PageSliders";
 import Tooltip from "tooltip.js";
-import {LazyLoadModule} from "./Modules/LazyLoadModule";
-import {Popup} from "./Components/Popup";
-require('./../../node_modules/chosen-js/chosen.jquery.min.js');
+import {LazyLoadModule} from "../Modules/LazyLoadModule";
+import {Popup} from "../Components/Popup";
+require('chosen-js/chosen.jquery.min.js');
 
 
 class App {

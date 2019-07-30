@@ -1,0 +1,160 @@
+
+/* kinds */
+.kinds {
+  padding: 60px 0 0;
+  color: @color_white;
+}
+
+.kinds-bg {
+  padding: 85px 0 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgba(59, 65, 144, 0.75);
+}
+
+.kinds-content {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 7% 0 7%;
+
+  h2 {
+    margin-bottom: 30px;
+    .font-size(36);
+    font-weight: 300;
+  }
+
+  .apps-logo {
+    bottom: 65px;
+  }
+}
+
+
+.kinds-txt {
+  max-width: 600px;
+  padding-right: 50px;
+  padding-bottom: 80px;
+}
+
+
+.kinds-img {
+  position: absolute;
+  bottom: 0;
+  right: 10%;
+  width: 40%;
+  height: 100%;
+  max-width: 600px;
+  font-size: 0;
+  background-size: 90%;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-image: url("../img/kinds_phones.png");
+
+  img {
+    display: inline-block;
+    width: 100%;
+  }
+}
+
+@media @laptop {
+  .kinds-bg {
+    padding: 55px 0 0;
+  }
+
+  .kinds-content {
+    h2 {
+      .font-size(30);
+    }
+  }
+
+  .kinds-img {
+    width: 36%;
+  }
+}
+
+@media @tablet {
+  .kinds-content {
+    h2 {
+      .font-size(28);
+    }
+  }
+
+  .kinds-img {
+    right: 0;
+  }
+}
+
+@media @mobileLg {
+  .kinds-content {
+    display: block;
+    padding: 0 2%;
+
+    h2 {
+      .font-size(26);
+    }
+  }
+
+  .kinds-txt {
+    padding-right: 0;
+    padding-bottom: 50px;
+  }
+
+  .kinds-bg {
+    padding: 30px 0 15px;
+  }
+
+  .kinds-img {
+    position: static;
+    height: 320px;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    background-image: url(../img/kinds_phones_mobile.png);
+  }
+}
+
+@media @mobileMd {
+  .kinds-content {
+    h2 {
+      .font-size(24);
+    }
+  }
+
+  .kinds-img {
+    position: static;
+    height: 320px;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    background-image: url(../img/kinds_phones_mobile.png);
+    background-size: contain;
+  }
+}
+
+
+@media @mobile {
+  .kinds-content {
+    h2 {
+      .font-size(20);
+    }
+  }
+
+  .kinds {
+    .app-link {
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+
+  .kinds-txt {
+    padding-bottom: 30px;
+  }
+
+  .kinds-img {
+    height: 270px;
+  }
+}
+
+/* kinds */

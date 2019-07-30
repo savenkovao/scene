@@ -108,3 +108,47 @@ img[data-src] {
   transition: .2s;
 }
 /* Image lazy load*/
+
+
+.custom-scroll-h {
+  overflow-x: auto;
+
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 4px;
+    background-color: #ecedee;
+    transition: @transition;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 0;
+    border-radius: 7px;
+    background-color: #c0bebe;
+    transition: @transition;
+  }
+
+  &:hover::-webkit-scrollbar {
+    height: 5px;
+  }
+}
+
+.custom-scroll-v {
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    height: 0;
+    width: 4px;
+    background-color: #ecedee;
+    transition: @transition;
+  }
+  &::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 0;
+    border-radius: 10px;
+    background-color: #c0bebe;
+    transition: @transition;
+  }
+
+  &:hover::-webkit-scrollbar {
+    width: 5px;
+  }
+}

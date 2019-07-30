@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <meta name="description" content="">
+
+  <link rel="icon" href="public/img/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,500,500i,700,700i&display=swap"
+        rel="stylesheet">
+  <link rel="stylesheet" href="public/css/app.min.css?v=1.01">
+
+  <script>
+    window.CONFIG = {
+      BASE_URL: '/',
+      GOOGLE_API_KEY: 'AIzaSyCchDkwEWPxFWGIRhoR_g8IH0IkiSDf1cI',
+      GOOGLE_API_VERSION: '3.36'
+    };
+  </script>
+
+
+  <title>SCENE</title>
+</head>
+<body>
+<div class="remodal-bg scenes-list-page" id="home">
+  <header id="header" class="header animated fadeInDown">
+    <div class="header-content container">
+      <div class="header-left">
+        <div class="logo">
+          <a href="/">
+            <img data-src="public/img/logo.svg" alt="SCENE" class="desktop-only">
+          </a>
+        </div>
+
+        <div class="header-search">
+          <form class="header-search-form">
+            <label class="form-label">
+              <input class="form-control form-control-icn search" type="text" placeholder="Search by keyword">
+            </label>
+
+            <label class="form-label form-label-select chosen-label-icn pin">
+              <select class="form-control form-control-icn pin chosen"
+                      data-placeholder="SCENE Cities">
+                <option selected disabled>SCENE Cities</option>
+                <option value="1">City name 1</option>
+                <option value="2">City name 2</option>
+                <option value="3">City name 3</option>
+                <option value="4">City name 4</option>
+              </select>
+            </label>
+            <button class="btn btn-red">Go</button>
+          </form>
+          <p>
+            Social discovery platfrom and network for entertainment and city experiences.
+          </p>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <ul class="menu">
+          <li><a href="#home" data-menu-ahchor>Home</a></li>
+          <li><a href="#livefeed" data-menu-ahchor>Livefeed</a></li>
+          <li><a href="#scenes" data-menu-ahchor>Scenes</a></li>
+          <li><a href="#organizer" data-menu-ahchor>Organizer</a></li>
+          <li class="menu-contact"><a href="#contact-us">Contact Us</a></li>
+          <li class="menu-btns">
+            <button data-remodal-target="auth-modal"
+                    class="btn btn-bordered">Log In
+            </button>
+
+            <button data-remodal-target="auth-modal"
+                    class="btn">Sign Up
+            </button>
+          </li>
+          <li class="menu-app-links">
+            <div class="app-links">
+              <a href="#" class="app-link">
+                <img data-src="public/img/app_ios.svg" class="app-link-img" alt="App Store Link">
+              </a>
+              <a href="#" class="app-link">
+                <img data-src="public/img/app_android.svg" class="app-link-img" alt="Google Play Link">
+              </a>
+            </div>
+          </li>
+
+          <li class="menu-socials">
+            <a href="#">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M18.82 5.11709C20.0187 5.18582 20.6075 5.36655 21.15 6.34909C21.715 7.33036 22 9.02055 22 11.9975V12.0013V12.0076C22 14.9705 21.715 16.6735 21.1513 17.6445C20.6088 18.6271 20.02 18.8053 18.8213 18.888C17.6225 18.958 14.6112 19 12.0025 19C9.38875 19 6.37625 18.958 5.17875 18.8867C3.9825 18.804 3.39375 18.6258 2.84625 17.6433C2.2875 16.6722 2 14.9693 2 12.0064V12.0038V12V11.9962C2 9.02055 2.2875 7.33036 2.84625 6.34909C3.39375 5.36527 3.98375 5.18582 5.18 5.11582C6.37625 5.03436 9.38875 5 12.0025 5C14.6112 5 17.6225 5.03436 18.82 5.11709ZM15.75 11.9988L9.5 8.18066V15.817L15.75 11.9988Z"
+                      fill="white"/>
+              </svg>
+            </a>
+            <a href="#">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 7.5377C19.4111 7.79864 18.7792 7.97561 18.1153 8.05461C18.7932 7.64868 19.3121 7.00481 19.558 6.23995C18.9222 6.61587 18.2203 6.88884 17.4724 7.03681C16.8735 6.39793 16.0217 6 15.0769 6C13.2642 6 11.7945 7.46973 11.7945 9.28139C11.7945 9.53833 11.8235 9.78928 11.8795 10.0293C9.152 9.89226 6.73346 8.58552 5.11477 6.59987C4.83182 7.08379 4.67085 7.64766 4.67085 8.24957C4.67085 9.38837 5.25075 10.3932 6.13059 10.981C5.59268 10.9631 5.08677 10.8151 4.64387 10.5691V10.6101C4.64387 12.1998 5.77566 13.5266 7.27637 13.8285C7.00141 13.9025 6.71148 13.9435 6.41153 13.9435C6.19958 13.9435 5.99461 13.9225 5.79365 13.8825C6.21156 15.1873 7.42335 16.1361 8.85909 16.1621C7.73629 17.0419 6.32055 17.5648 4.78285 17.5648C4.51791 17.5648 4.25694 17.5488 4 17.5198C5.45273 18.4527 7.17741 18.9966 9.03106 18.9966C15.0689 18.9966 18.3693 13.9955 18.3693 9.65833L18.3583 9.23341C19.0032 8.77346 19.561 8.19558 20 7.5377Z"
+                      fill="white"/>
+              </svg>
+            </a>
+            <a href="#">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.9563 9.2372V7.86001C12.9563 7.65327 12.9658 7.49313 12.9852 7.38001C13.0044 7.26672 13.0483 7.1553 13.1163 7.0453C13.1842 6.93537 13.2941 6.85948 13.446 6.81743C13.598 6.7753 13.8001 6.75431 14.0523 6.75431H15.4295V4H13.2279C11.954 4 11.0391 4.30223 10.483 4.9067C9.92696 5.5113 9.64899 6.40187 9.64899 7.57873V9.23716H8V11.9917H9.64888V19.9834H12.9563V11.9917H15.1577L15.4487 9.2372H12.9563Z"
+                      fill="white"/>
+              </svg>
+            </a>
+            <a href="#">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M17.9466 4H6.0544C4.92459 4 4 4.92395 4 6.05376V17.9459C4 19.0754 4.92459 19.9987 6.0544 19.9987H17.9466C19.0764 19.9987 20 19.0754 20 17.9459V6.05376C20 4.92395 19.0764 4 17.9466 4ZM14.9355 6.49672C14.9355 6.10024 15.2591 5.77539 15.6558 5.77539H17.464C17.86 5.77539 18.1843 6.10024 18.1843 6.49672V8.22014C18.1843 8.61678 17.86 8.94088 17.464 8.94088H15.6558C15.2591 8.94088 14.9355 8.61678 14.9355 8.22014V6.49672ZM18.1912 10.7656H16.7834C16.9169 11.2016 16.9892 11.6614 16.9892 12.1394C16.9892 14.7998 14.7617 16.9576 12.0151 16.9576C9.26909 16.9576 7.04151 14.7998 7.04151 12.1394C7.04151 11.6614 7.11458 11.2016 7.24743 10.7656H5.77869V17.5247C5.77869 17.8747 6.0645 18.1594 6.41421 18.1594H17.5559C17.9059 18.1594 18.1912 17.8747 18.1912 17.5247V10.7656ZM8.80225 11.9656C8.80225 10.2451 10.2412 8.85156 12.015 8.85156C13.7899 8.85156 15.2289 10.245 15.2289 11.9656C15.2289 13.6844 13.7899 15.0789 12.015 15.0789C10.2412 15.0789 8.80225 13.6844 8.80225 11.9656Z"
+                      fill="white"/>
+              </svg>
+            </a>
+          </li>
+        </ul>
+
+        <div class="brgr-close"></div>
+
+        <div class="menu-logo">
+          <a href="/">
+            <img data-src="public/img/logo.svg" alt="SCENE" class="desktop-only">
+          </a>
+        </div>
+      </nav>
+
+      <div class="brgr-menu"></div>
+    </div>
+  </header>
+
+  <main class="wrapper">
+    <section class="apps">
+      <div class="apps-bg">
+        <div class="container">
+          <div class="apps-content clearfix">
+            <div class="apps-txt">
+              <h2 class="m-b-30">Know your city</h2>
+
+              <p class="h4">
+                Find your kind of events, activities and attractions and meet like-minded people online-to-offline! <br>
+              </p>
+
+              <div class="app-links">
+                <a href="#" class="app-link">
+                  <img data-src="public/img/app_ios.svg" class="app-link-img" alt="App Store Link">
+                </a>
+                <a href="#" class="app-link">
+                  <img data-src="public/img/app_android.svg" class="app-link-img" alt="Google Play Link">
+                </a>
+              </div>
+            </div>
+
+            <div class="apps-img">
+              <img data-src="public/img/app_phones.png" alt="Phones">
+            </div>
+
+            <div class="apps-logo">
+              <img data-src="public/img/logo.svg" alt="Phones">
+            </div>
+          </div>
+        </div>
+
+        <!-- Search Form for mobiles -->
+        <div class="header-search-mobile">
+          <form class="header-search-form">
+            <label class="form-label">
+              <input class="form-control form-control-icn search" type="text" placeholder="Search by keyword">
+            </label>
+
+
+            <label class="form-label form-label-select chosen-label-icn pin">
+              <select class="form-control form-control-icn pin chosen"
+                      data-placeholder="SCENE Cities">
+                <option selected disabled>SCENE Cities</option>
+                <option value="1">City name 1</option>
+                <option value="2">City name 2</option>
+                <option value="3">City name 3</option>
+                <option value="4">City name 4</option>
+              </select>
+            </label>
+            <button class="btn btn-red">Go</button>
+          </form>
+          <p class="text-white">
+            Social discovery platfrom and network for entertainment and city experiences.
+          </p>
+        </div>
+        <!-- Search Form for mobiles -->
+
+        <ul class="aside-socials">
+          <li><a href="#">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M13.9466 0H2.0544C0.924587 0 0 0.923947 0 2.05376V13.9459C0 15.0754 0.924587 15.9987 2.0544 15.9987H13.9466C15.0764 15.9987 16 15.0754 16 13.9459V2.05376C16 0.923947 15.0764 0 13.9466 0ZM10.9355 2.49672C10.9355 2.10024 11.2591 1.77539 11.6558 1.77539H13.464C13.86 1.77539 14.1843 2.10024 14.1843 2.49672V4.22014C14.1843 4.61678 13.86 4.94088 13.464 4.94088H11.6558C11.2591 4.94088 10.9355 4.61678 10.9355 4.22014V2.49672ZM14.1912 6.76562H12.7834C12.9169 7.20162 12.9892 7.66141 12.9892 8.13944C12.9892 10.7998 10.7617 12.9576 8.01506 12.9576C5.26909 12.9576 3.04151 10.7998 3.04151 8.13944C3.04151 7.66141 3.11458 7.20162 3.24743 6.76562H1.77869V13.5247C1.77869 13.8747 2.0645 14.1594 2.41421 14.1594H13.5559C13.9059 14.1594 14.1912 13.8747 14.1912 13.5247V6.76562ZM4.80225 7.96559C4.80225 6.24506 6.24118 4.85156 8.01505 4.85156C9.78987 4.85156 11.2289 6.245 11.2289 7.96559C11.2289 9.68436 9.78987 11.0789 8.01505 11.0789C6.24118 11.0789 4.80225 9.68436 4.80225 7.96559Z"
+                    fill="white"/>
+            </svg>
+          </a></li>
+          <li><a href="#">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12.9563 9.2372V7.86001C12.9563 7.65327 12.9658 7.49313 12.9852 7.38001C13.0044 7.26672 13.0483 7.1553 13.1163 7.0453C13.1842 6.93537 13.2941 6.85948 13.446 6.81743C13.598 6.7753 13.8001 6.75431 14.0523 6.75431H15.4295V4H13.2279C11.954 4 11.0391 4.30223 10.483 4.9067C9.92696 5.5113 9.64899 6.40187 9.64899 7.57873V9.23716H8V11.9917H9.64888V19.9834H12.9563V11.9917H15.1577L15.4487 9.2372H12.9563Z"
+                    fill="white"/>
+            </svg>
+          </a></li>
+          <li><a href="#">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 7.5377C19.4111 7.79864 18.7792 7.97561 18.1153 8.05461C18.7932 7.64868 19.3121 7.00481 19.558 6.23995C18.9222 6.61587 18.2203 6.88884 17.4724 7.03681C16.8735 6.39793 16.0217 6 15.0769 6C13.2642 6 11.7945 7.46973 11.7945 9.28139C11.7945 9.53833 11.8235 9.78928 11.8795 10.0293C9.152 9.89226 6.73346 8.58552 5.11477 6.59987C4.83182 7.08379 4.67085 7.64766 4.67085 8.24957C4.67085 9.38837 5.25075 10.3932 6.13059 10.981C5.59268 10.9631 5.08677 10.8151 4.64387 10.5691V10.6101C4.64387 12.1998 5.77566 13.5266 7.27637 13.8285C7.00141 13.9025 6.71148 13.9435 6.41153 13.9435C6.19958 13.9435 5.99461 13.9225 5.79365 13.8825C6.21156 15.1873 7.42335 16.1361 8.85909 16.1621C7.73629 17.0419 6.32055 17.5648 4.78285 17.5648C4.51791 17.5648 4.25694 17.5488 4 17.5198C5.45273 18.4527 7.17741 18.9966 9.03106 18.9966C15.0689 18.9966 18.3693 13.9955 18.3693 9.65833L18.3583 9.23341C19.0032 8.77346 19.561 8.19558 20 7.5377Z"
+                    fill="white"/>
+            </svg>
+          </a></li>
+          <li><a href="#">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M18.82 5.11709C20.0187 5.18582 20.6075 5.36655 21.15 6.34909C21.715 7.33036 22 9.02055 22 11.9975V12.0013V12.0076C22 14.9705 21.715 16.6735 21.1513 17.6445C20.6088 18.6271 20.02 18.8053 18.8213 18.888C17.6225 18.958 14.6112 19 12.0025 19C9.38875 19 6.37625 18.958 5.17875 18.8867C3.9825 18.804 3.39375 18.6258 2.84625 17.6433C2.2875 16.6722 2 14.9693 2 12.0064V12.0038V12V11.9962C2 9.02055 2.2875 7.33036 2.84625 6.34909C3.39375 5.36527 3.98375 5.18582 5.18 5.11582C6.37625 5.03436 9.38875 5 12.0025 5C14.6112 5 17.6225 5.03436 18.82 5.11709ZM15.75 11.9988L9.5 8.18066V15.817L15.75 11.9988Z"
+                    fill="white"/>
+            </svg>
+          </a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="scenes-search" data-toggle-header>
+      <div class="container">
+        <div class="container-content scenes-content" id="scenes">
+          <div class="panel-title panel-scenes" data-bg-src="public/img/bg_scenes.jpg">
+            <span class="panel-icon scenes-icn">Scenes</span>
+
+            <span class="info-icn" data-tooltip></span>
+          </div>
+
+          <div class="scenes-filter">
+            <div data-tabs>
+              <div class="tabs" data-tab-toggles>
+                <div class="tab-item active">Latest</div>
+                <div class="tab-item">NEARBY</div>
+                <div class="tab-item">POPULAR</div>
+                <div class="tab-item">TODAY</div>
+                <div class="tab-item">THIS WEEK</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="kinds">
+      <div class="kinds-bg" data-bg-src="public/img/kinds_bg.jpg">
+        <div class="container">
+          <div class="kinds-content">
+            <div class="kinds-txt">
+              <h2 class="m-b-30">
+                Your kind of scenes with your kind of people! Connect with both organizers and attendees!
+              </h2>
+
+              <div class="app-links">
+                <a href="#" class="app-link">
+                  <img data-src="public/img/app_ios.svg" class="app-link-img" alt="App Store Link">
+                </a>
+                <a href="#" class="app-link">
+                  <img data-src="public/img/app_android.svg" class="app-link-img" alt="Google Play Link">
+                </a>
+              </div>
+            </div>
+
+            <div class="kinds-img"></div>
+
+            <div class="apps-logo">
+              <img data-src="public/img/logo.svg" alt="Phones">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a href="#heading" class="footer-go-up" title="Go up" data-go-up></a>
+
+    <div class="footer-wrapper">
+      <div class="footer-top clearfix">
+        <div class="footer-logo">
+          <a href="#home">
+            <img data-src="public/img/logo.svg" alt="SCENE">
+          </a>
+        </div>
+
+        <div class="footer-links-cont">
+          <ul class="footer-links footer-links-hide">
+            <li><a href="#" target="_blank">Livefeed</a></li>
+            <li><a href="#" target="_blank">Scenes</a></li>
+            <li><a href="#" target="_blank">Organizer</a></li>
+            <li><a href="#" target="_blank">Contact Us</a></li>
+          </ul>
+
+          <ul class="footer-links">
+            <li><a href="#" target="_blank">Cookies</a></li>
+            <li><a href="#" target="_blank">Terms of Use</a></li>
+            <li><a href="#" target="_blank">Privacy</a></li>
+            <li><a href="#" target="_blank">About Us: Behind the SCENE</a></li>
+            <li><a href="#" target="_blank">Better Together</a></li>
+            <li><a href="#" target="_blank">SCENE’s Archives</a></li>
+          </ul>
+
+          <div class="footer-form-cont">
+            <h5 class="uppercase text-center m-b-20">Subscribe To Our Weekly Newsletter</h5>
+
+            <form class="footer-form">
+              <div class="form-group">
+                <input type="text" class="form-control form-control-lg form-control-white form-control-rounded"
+                       placeholder="Enter email">
+                <button class="btn btn-green btn-rounded">
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <div class="footer-apps">
+            <div class="app-links">
+              <a href="#" class="app-link">
+                <img data-src="public/img/app_ios.svg" class="app-link-img" alt="App Store Link">
+              </a>
+              <a href="#" class="app-link">
+                <img data-src="public/img/app_android.svg" class="app-link-img" alt="Google Play Link">
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-btns">
+          <a href="#" class="btn btn-lg" target="_blank">CLAIM OR PROMOTE YOUR SCENE</a>
+
+          <a href="#" class="btn btn-lg btn-red" target="_blank">SELL TICKETS & OFFERS</a>
+
+          <small>Now live in:</small>
+          <div class="footer-flags">
+            <img data-src="public/img/flag_uae.png" alt="UAE flag">
+            <img data-src="public/img/flag_lb.png" alt="Lebanon flag">
+          </div>
+        </div>
+
+        <div class="footer-popular">
+          <div class="h6 m-b-30">Popular searches:</div>
+
+          <div class="footer-popular-lists">
+            <ul class="footer-popular-list">
+              <li><a href="#">Events in Dubai</a></li>
+              <li><a href="#">Events in Abu Dhabi</a></li>
+              <li><a href="#">iteConcerts in Dubaim</a></li>
+              <li><a href="#">Concerts in Abu Dhabi</a></li>
+              <li><a href="#">Concerts in the UAE</a></li>
+              <li><a href="#">Sports events in the UAE</a></li>
+              <li><a href="#">Nightlife in Dubai</a></li>
+              <li><a href="#">Nightlife in Abu Dhabi</a></li>
+            </ul>
+
+            <ul class="footer-popular-list">
+              <li><a href="#">Brunches in Dubai</a></li>
+              <li><a href="#">Brunches in Abu Dhabi</a></li>
+              <li><a href="#">Tourism and Local Destinations</a></li>
+              <li><a href="#">Arts and Culture in Dubai</a></li>
+              <li><a href="#">Arts and Culture in Abu Dhabi</a></li>
+              <li><a href="#">Arts and Culture in the UAE</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-socials text-center clearfix">
+        <div class="h5 m-b-0">Stay tuned to what the city is up to! Follow us:</div>
+
+        <a href="#">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M17.9466 4H6.0544C4.92459 4 4 4.92395 4 6.05376V17.9459C4 19.0754 4.92459 19.9987 6.0544 19.9987H17.9466C19.0764 19.9987 20 19.0754 20 17.9459V6.05376C20 4.92395 19.0764 4 17.9466 4ZM14.9355 6.49672C14.9355 6.10024 15.2591 5.77539 15.6558 5.77539H17.464C17.86 5.77539 18.1843 6.10024 18.1843 6.49672V8.22014C18.1843 8.61678 17.86 8.94088 17.464 8.94088H15.6558C15.2591 8.94088 14.9355 8.61678 14.9355 8.22014V6.49672ZM18.1912 10.7656H16.7834C16.9169 11.2016 16.9892 11.6614 16.9892 12.1394C16.9892 14.7998 14.7617 16.9576 12.0151 16.9576C9.26909 16.9576 7.04151 14.7998 7.04151 12.1394C7.04151 11.6614 7.11458 11.2016 7.24743 10.7656H5.77869V17.5247C5.77869 17.8747 6.0645 18.1594 6.41421 18.1594H17.5559C17.9059 18.1594 18.1912 17.8747 18.1912 17.5247V10.7656ZM8.80225 11.9656C8.80225 10.2451 10.2412 8.85156 12.015 8.85156C13.7899 8.85156 15.2289 10.245 15.2289 11.9656C15.2289 13.6844 13.7899 15.0789 12.015 15.0789C10.2412 15.0789 8.80225 13.6844 8.80225 11.9656Z"
+                  fill="white"/>
+          </svg>
+        </a>
+        <a href="#">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12.9563 9.2372V7.86001C12.9563 7.65327 12.9658 7.49313 12.9852 7.38001C13.0044 7.26672 13.0483 7.1553 13.1163 7.0453C13.1842 6.93537 13.2941 6.85948 13.446 6.81743C13.598 6.7753 13.8001 6.75431 14.0523 6.75431H15.4295V4H13.2279C11.954 4 11.0391 4.30223 10.483 4.9067C9.92696 5.5113 9.64899 6.40187 9.64899 7.57873V9.23716H8V11.9917H9.64888V19.9834H12.9563V11.9917H15.1577L15.4487 9.2372H12.9563Z"
+                  fill="white"/>
+          </svg>
+        </a>
+        <a href="#">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 7.5377C19.4111 7.79864 18.7792 7.97561 18.1153 8.05461C18.7932 7.64868 19.3121 7.00481 19.558 6.23995C18.9222 6.61587 18.2203 6.88884 17.4724 7.03681C16.8735 6.39793 16.0217 6 15.0769 6C13.2642 6 11.7945 7.46973 11.7945 9.28139C11.7945 9.53833 11.8235 9.78928 11.8795 10.0293C9.152 9.89226 6.73346 8.58552 5.11477 6.59987C4.83182 7.08379 4.67085 7.64766 4.67085 8.24957C4.67085 9.38837 5.25075 10.3932 6.13059 10.981C5.59268 10.9631 5.08677 10.8151 4.64387 10.5691V10.6101C4.64387 12.1998 5.77566 13.5266 7.27637 13.8285C7.00141 13.9025 6.71148 13.9435 6.41153 13.9435C6.19958 13.9435 5.99461 13.9225 5.79365 13.8825C6.21156 15.1873 7.42335 16.1361 8.85909 16.1621C7.73629 17.0419 6.32055 17.5648 4.78285 17.5648C4.51791 17.5648 4.25694 17.5488 4 17.5198C5.45273 18.4527 7.17741 18.9966 9.03106 18.9966C15.0689 18.9966 18.3693 13.9955 18.3693 9.65833L18.3583 9.23341C19.0032 8.77346 19.561 8.19558 20 7.5377Z"
+                  fill="white"/>
+          </svg>
+        </a>
+        <a href="#">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M18.82 5.11709C20.0187 5.18582 20.6075 5.36655 21.15 6.34909C21.715 7.33036 22 9.02055 22 11.9975V12.0013V12.0076C22 14.9705 21.715 16.6735 21.1513 17.6445C20.6088 18.6271 20.02 18.8053 18.8213 18.888C17.6225 18.958 14.6112 19 12.0025 19C9.38875 19 6.37625 18.958 5.17875 18.8867C3.9825 18.804 3.39375 18.6258 2.84625 17.6433C2.2875 16.6722 2 14.9693 2 12.0064V12.0038V12V11.9962C2 9.02055 2.2875 7.33036 2.84625 6.34909C3.39375 5.36527 3.98375 5.18582 5.18 5.11582C6.37625 5.03436 9.38875 5 12.0025 5C14.6112 5 17.6225 5.03436 18.82 5.11709ZM15.75 11.9988L9.5 8.18066V15.817L15.75 11.9988Z"
+                  fill="white"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+
+    <div class="copyright">
+      <p class="copyright-wrapper">
+        © 2019 Scene Social App.Trademarked, copyrighted and registered by SCENE
+        Social Entertainment Holdings LTD. All Rights Reserved.
+      </p>
+    </div>
+  </footer>
+</div>
+
+<!-- Modal -->
+<div class="remodal auth-modal" data-remodal-id="auth-modal" id="auth-modal">
+  <button data-remodal-action="close" class="remodal-close"></button>
+  <h3 class="text-center">
+    For the full experience Entertainment and Social Experience please
+    download SCENE’s mobile app!
+  </h3>
+  <div class="app-links">
+    <a href="#" class="app-link">
+      <img data-src="public/img/app_ios_dark.svg" class="app-link-img" alt="App Store Link">
+    </a>
+    <a href="#" class="app-link">
+      <img data-src="public/img/app_android_dark.svg" class="app-link-img" alt="Google Play Link">
+    </a>
+  </div>
+
+  <div class="auth-modal-img">
+    <img data-src="public/img/auth_popup_desktop.png" alt="Apps">
+  </div>
+</div>
+<!-- Modal -->
+</body>
+
+<script src="public/js/scenes-list.js?v=1.10"></script>
+</html>

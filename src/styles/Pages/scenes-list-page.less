@@ -1,0 +1,92 @@
+.scenes-list-page {
+  .apps {
+    padding: 0;
+    height: 90vh;
+    min-height: 550px;
+    max-height: 680px;
+  }
+
+  .apps-bg {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    //padding: 140px 0;
+    padding: 0;
+    position: relative;
+    background-image: url("../img/scenes-heding.jpg");
+
+    .container {
+      height: 100%;
+    }
+
+    .apps-logo {
+      bottom: 65px;
+    }
+  }
+
+  .apps-content {
+    height: 100%;
+    padding: 120px 7%;
+  }
+}
+
+
+/* scenes-search  */
+.scenes-search {
+  padding: 70px 0 60px;
+}
+/* scenes-search  */
+
+/* scenes-filter */
+.scenes-filter {
+  margin: 0 0 25px;
+  padding: 30px 20px 0;
+  background-color: @color_black;
+
+  .tabs {
+    padding: 0;
+  }
+}
+/* scenes-filter */
+
+@media @laptopMd {
+  .scenes-list-page {
+    .apps-content {
+      padding: 120px 2%;
+    }
+  }
+}
+
+
+@media @tablet {
+  .scenes-list-page {
+    .apps-content {
+     display: flex;
+    }
+
+    .apps-img {
+      display: none;
+    }
+  }
+}
+
+@media @mobileLg {
+  .scenes-list-page {
+    .apps {
+      padding: 0;
+      height: 450px;
+      min-height: 450px;
+      max-height: 470px;
+    }
+
+    .apps-bg {
+      .container {
+        display: none;
+      }
+    }
+
+    .header-search-mobile {
+      top: 160px;
+    }
+  }
+}

@@ -8,7 +8,8 @@ let gulp = require('gulp'),
     helpers = require('./gulp.helpers'),
     minify = require('gulp-babel-minify'),
     imagemin = require('gulp-imagemin'),
-    runSequence = require('run-sequence');
+    runSequence = require('run-sequence'),
+    es = require('event-stream');
 
 require('any-promise/register')('bluebird');
 
@@ -25,7 +26,6 @@ gulp.src = function () {
   return helpers.fixPipe(origSrc.apply(this, arguments));
 };
 
-
 gulp.task('fonts', function () {
   return gulp.src(path.fonts)
       .pipe(copy())
@@ -39,7 +39,15 @@ gulp.task('img', function () {
 });
 
 gulp.task('script', function () {
-  return helpers.es6toes5('src/js/index.js', 'index.js')
+  let files = [
+    './src/js/Pages/index.js',
+    './src/js/Pages/scenes-list.js',
+  ];
+  var tasks = files.map(function (entry) {
+    return helpers.es6toes5(entry)
+  });
+
+  // return es.merge.apply(null, tasks);
 });
 
 // gulp.task('script-concat', ['script'], function () {
@@ -49,7 +57,7 @@ gulp.task('script', function () {
 // });
 
 gulp.task('script-min', ['script'], () => {
-  return gulp.src([PUBLIC_DIR + '/js/index.js'])
+  return gulp.src([PUBLIC_DIR + '/js/*.js'])
       .pipe(minify({
         mangle: false,
         drop_debugger: true,
