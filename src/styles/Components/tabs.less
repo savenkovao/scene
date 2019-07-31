@@ -8,6 +8,7 @@
 }
 
 .tab-item {
+  display: inline-block;
   padding: 20px 10px;
   width: 100%;
   color: @color_white;
@@ -40,5 +41,13 @@
     height: auto;
     z-index: 0;
     overflow: visible;
+  }
+}
+
+
+@media @mobileLg {
+  .tabs {
+
+    justify-content: flex-start;
   }
 }

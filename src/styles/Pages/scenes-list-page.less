@@ -1,4 +1,6 @@
 .scenes-list-page {
+  /* apps */
+
   .apps {
     padding: 0;
     height: 90vh;
@@ -28,50 +30,96 @@
     height: 100%;
     padding: 120px 7%;
   }
-}
+
+  /* apps */
 
 
-/* scenes-search  */
-.scenes-search {
-  padding: 70px 0 60px;
-}
-/* scenes-search  */
+  /* scenes-search  */
 
-/* scenes-filter */
-.scenes-filter {
-  margin: 0 0 25px;
-  padding: 30px 20px 0;
-  background-color: @color_black;
-
-  .tabs {
-    padding: 0;
+  .scenes-search {
+    padding: 70px 0 60px;
   }
-}
-/* scenes-filter */
 
-@media @laptopMd {
-  .scenes-list-page {
+  /* scenes-search  */
+
+  /* scenes-filter */
+
+  .scenes-filter {
+    margin: 0 0 25px;
+    padding: 30px 20px 0;
+    background-color: @color_black;
+
+    .tabs {
+      padding: 0;
+    }
+  }
+
+  .scenes-content {
+    position: relative;
+  }
+
+  .panel-scenes {
+    padding: 30px 55px;
+  }
+
+  .scenes-filter-organize {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1;
+
+    .btn {
+      width: 100%;
+      max-width: 260px;
+      min-width: 260px;
+
+      &:hover {
+        svg {
+          circle {
+            stroke: @color_green;
+          }
+        }
+      }
+    }
+  }
+
+  /* scenes-filter */
+
+
+  @media @laptopMd {
     .apps-content {
       padding: 120px 2%;
     }
+
+    .scenes-filter-organize {
+      .btn {
+        max-width: 220px;
+        min-width: 220px;
+      }
+    }
   }
-}
+
+  @media @laptop {
+    .scenes-filter-organize {
+      .btn {
+        max-width: 180px;
+        min-width: 180px;
+      }
+    }
+  }
 
 
-@media @tablet {
-  .scenes-list-page {
+  @media @tablet {
     .apps-content {
-     display: flex;
+      display: flex;
     }
 
     .apps-img {
       display: none;
     }
   }
-}
 
-@media @mobileLg {
-  .scenes-list-page {
+  @media @mobileLg {
     .apps {
       padding: 0;
       height: 450px;
@@ -87,6 +135,20 @@
 
     .header-search-mobile {
       top: 160px;
+    }
+
+    .scenes-filter {
+      padding: 15px 8px 0;
+    }
+
+    .scenes-filter-organize {
+      position: static;
+      text-align: center;
+      padding-bottom: 15px;
+      border-bottom:  1px solid @color_purple;
+      .btn {
+        max-width: 260px;
+      }
     }
   }
 }

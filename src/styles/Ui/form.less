@@ -103,6 +103,63 @@
 
 }
 
+/* Radio */
+.form-control-checkbox {
+position: relative;
+  display: inline-block;
+  width: 100%;
+  cursor: pointer;
+  input {
+display: none;
+    &:checked {
+      ~.form-control {
+        background-color: @color_green;
+      }
+
+      ~.form-control-checkbox-icn {
+        &::after {
+
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
+
+.form-control-checkbox-txt {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 20px;
+  color: white;
+}
+
+.form-control-checkbox-icn {
+  position: absolute;
+  display: inline-block;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  width: 18px;
+  height: 18px;
+  border: 1px solid @color_white;
+  border-radius: 50%;
+
+  &::after {
+    content: '';
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    width: 9px;
+    height: 9px;
+    background-color: @color_white;
+  }
+}
+/* Radio */
+
 /* chosen overrides */
 
 .chosen-container {

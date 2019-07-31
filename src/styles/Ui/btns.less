@@ -65,12 +65,38 @@
     &:hover {
       color: @color_green;
       border: 1px solid @color_green;
+
+
+      svg {
+        path{
+          fill : @color_green;
+        }
+      }
     }
   }
 
   &.btn-view-all {
     width: 100%;
     max-width: 260px;
+  }
+
+  &.btn-icon-in {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px;
+
+    svg {
+      display: inline-block;
+      max-width: 26px;
+      max-height: 26px;
+      margin-right: 8px;
+      transition: @transition;
+
+      path, circle {
+        transition: @transition;
+      }
+    }
   }
 }
 
