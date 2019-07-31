@@ -34,10 +34,13 @@ class App {
     // });
 
     if($('[data-tooltip]').length) {
-      new Tooltip($('[data-tooltip]'), {
-        placement: 'top',
-        title: "Tooltip helper text"
-      });
+
+      $('[data-tooltip]').each((i, item) =>{
+        new Tooltip($(item), {
+          placement: 'top',
+          title: "Tooltip helper text"
+        });
+      })
     }
 
     $('.chosen').chosen({
