@@ -1,5 +1,6 @@
 import $ from 'jquery';
-import {BaseComponent} from '../Base/BaseComponent';
+import { BaseComponent } from '../Base/BaseComponent';
+
 
 
 export class HeaderComponent extends BaseComponent {
@@ -17,20 +18,22 @@ export class HeaderComponent extends BaseComponent {
       this.toggleMobileMenu();
     });
     $(document).on('closing', '.remodal', (e) => {
-      this.toggleMobileMenu()
+      if(window.matchMedia('(max-width: 1250px)').matches) {
+        this.toggleMobileMenu();
+      }
     });
     // $(document).on('click', '.header-login.mobile-show', (e) => {
     //   this.toggleMobileMenu();
     // });
 
     $(document).on('click', '.menu a', (e) => {
-      if (window.matchMedia('(max-width: 1024px)').matches) {
+      if(window.matchMedia('(max-width: 1250px)').matches) {
         this.toggleMobileMenu(e);
       }
     });
 
     $(window).on('resize', (e) => {
-      if (window.matchMedia('(min-width: 480px)').matches) {
+      if(window.matchMedia('(min-width: 480px)').matches) {
         $('.nav').removeAttr('style');
         $('.brgr-menu').removeClass('active');
         this.$body.removeClass('hidden');
@@ -38,7 +41,7 @@ export class HeaderComponent extends BaseComponent {
     });
 
     $(window).on('scroll', (e) => {
-      this.toggleHeaderType()
+      this.toggleHeaderType();
     });
   }
 
@@ -46,20 +49,20 @@ export class HeaderComponent extends BaseComponent {
     let isAnchor = false;
     let isMobile = window.matchMedia('(max-width: 480px)').matches;
 
-    if (e && e.currentTarget) {
-      isAnchor = $(e.currentTarget)[0].hasAttribute('data-menu-ahchor')
+    if(e && e.currentTarget) {
+      isAnchor = $(e.currentTarget)[0].hasAttribute('data-menu-ahchor');
     }
 
-    if (isMobile) {
-      if (!this.$body.hasClass('hidden')) {
+    if(isMobile) {
+      if(!this.$body.hasClass('hidden')) {
         this.currentScroll = window.pageYOffset;
       }
 
       this.$body.toggleClass('hidden');
 
-      if (!this.$body.hasClass('hidden') && !isAnchor) {
+      if(!this.$body.hasClass('hidden') && !isAnchor) {
         $('html, body').animate({
-          scrollTop: this.currentScroll
+          scrollTop : this.currentScroll
         }, 0);
       }
     }
@@ -72,9 +75,9 @@ export class HeaderComponent extends BaseComponent {
     let $headerToggleElem = $('[data-toggle-header]');
     let toggleHeight = $headerToggleElem.offset().top + $headerToggleElem.outerHeight();
 
-    if (window.pageYOffset > toggleHeight && !this.$header.hasClass('scrolled')) {
+    if(window.pageYOffset > toggleHeight && !this.$header.hasClass('scrolled')) {
       this.$header.addClass('scrolled fadeInDown');
-    } else if (window.pageYOffset <= toggleHeight) {
+    } else if(window.pageYOffset <= toggleHeight) {
       this.$header.removeClass('scrolled fadeInDown');
     }
   }
