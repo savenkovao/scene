@@ -34,7 +34,7 @@
     "chosen-js": "^1.8.7",
     "event-stream": "^4.0.1",
     "google-maps": "^3.3.0",
-    "jquery": "3.2.1",
+    "jquery": "3.5.0",
     "natives": "^1.1.6",
     "remodal": "1.1.1",
     "slick-carousel": "^1.8.1",
